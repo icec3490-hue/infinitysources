@@ -1,0 +1,2053 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>INFINITY SOURCES, LDA · Industrial supply and technical services in Mozambique</title>
+    <meta name="description" id="meta-desc" content="Industrial equipment, consumables and technical services for mining, manufacturing and heavy construction across Mozambique." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      /* Brand: dark charcoal brown, industrial yellow, white text. Set once through the tokens. */
+      :root,
+      :root[data-theme] {
+        color-scheme: dark;
+        --x-ink: #231d1b;
+        --x-ink-2: #2e2624;
+        --x-ink-3: #3b322f;
+        --x-yellow: #ffe53b;
+        --x-paper: #f4f1ec;
+        --x-error: #ff9b94;
+        --fill-primary-on: var(--x-ink);
+        --fill-primary: var(--x-yellow);
+        --fill-tertiary: var(--x-ink-2);
+        --text-primary: #ffffff;
+        --text-secondary: #d4ccc7;
+        --text-tertiary: #ffffff59;
+        --text-primary-on: var(--x-ink);
+        --text-secondary-on: #4a3f3b;
+        --stroke-primary: #ffffff33;
+        --stroke-secondary: #ffffff1a;
+        --stroke-primary-on: #ffffff14;
+        --stroke-composer: #ffffff26;
+        --hover-wash: #ffffff12;
+        --hover-wash-primary-on: #231d1b14;
+        --mat-agent: rgb(35 29 27 / 0.84);
+        --mat-inverse: rgb(35 29 27 / 0.86);
+        --hark-shadow: 0 12px 40px rgb(0 0 0 / 0.35);
+        --hero-surface: var(--x-ink);
+        --hero-scrim-strong: rgb(24 19 17 / 0.94);
+        --hero-scrim-soft: rgb(24 19 17 / 0.6);
+        --hero-scrim-side: rgb(24 19 17 / 0.72);
+        --hero-glass: rgb(35 29 27 / 0.55);
+        --hero-glass-faint: rgb(35 29 27 / 0.5);
+        --hero-glass-stroke: rgb(255 229 59 / 0.35);
+      }
+
+      /* Header */
+      .x-header {
+        position: sticky;
+        top: calc(env(safe-area-inset-top, 0px) + 10px);
+        z-index: 30;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 6px 6px 18px;
+        border-radius: var(--r-l);
+        background: var(--mat-inverse);
+        -webkit-backdrop-filter: var(--hark-blur);
+        backdrop-filter: var(--hark-blur);
+        border: 1px solid var(--stroke-secondary);
+        box-shadow: var(--hark-shadow);
+      }
+      .x-logo {
+        display: inline-flex;
+        align-items: center;
+        min-height: var(--tap);
+        margin-right: auto;
+        font: var(--weight-bold) 15px/1.1 var(--sans);
+        letter-spacing: 0.06em;
+        color: var(--x-yellow);
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .x-menu { display: flex; align-items: center; gap: 2px; }
+      .x-menu a:not(.x-btn) {
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+        padding: 6px 11px;
+        border-radius: var(--r-pill);
+        font: var(--type-label);
+        color: var(--text-secondary);
+        text-decoration: none;
+        white-space: nowrap;
+      }
+      .x-menu a:not(.x-btn):hover,
+      .x-menu a[aria-current="true"] { color: var(--text-primary); background: var(--x-ink-3); }
+      .x-lang {
+        display: inline-flex;
+        align-items: center;
+        flex: none;
+        margin-left: 6px;
+        padding: 1px;
+        border: 1px solid var(--stroke-primary);
+        border-radius: var(--r-pill);
+      }
+      .x-lang button {
+        min-width: var(--tap);
+        min-height: var(--tap);
+        padding: 0 10px;
+        border: 0;
+        border-radius: var(--r-pill);
+        background: none;
+        color: var(--text-secondary);
+        font: var(--weight-bold) var(--size-small)/1 var(--sans);
+        letter-spacing: 0.06em;
+        cursor: pointer;
+        transition: background var(--dur-quick) var(--ease-out), color var(--dur-quick) var(--ease-out);
+      }
+      .x-lang button:hover { color: var(--text-primary); }
+      .x-lang button[aria-pressed="true"] { background: var(--x-yellow); color: var(--x-ink); }
+      .x-lang button.is-confirm { animation: x-lang-pulse 420ms var(--ease-out); }
+      @keyframes x-lang-pulse { 0% { box-shadow: 0 0 0 0 rgb(255 229 59 / 0.6); } 100% { box-shadow: 0 0 0 8px rgb(255 229 59 / 0); } }
+      @media (prefers-reduced-motion: reduce) { .x-lang button.is-confirm { animation: none; outline: 2px solid var(--x-yellow); outline-offset: 2px; } }
+      .x-sr { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+      .x-lang button:focus-visible { outline: 2px solid var(--x-yellow); outline-offset: 2px; }
+      .x-lang__sep { padding: 0 2px; color: var(--text-secondary); font: var(--type-label); }
+      @media (min-width: 1081px) and (max-width: 1240px) {
+        .x-menu a:not(.x-btn) { padding: 6px 8px; }
+      }
+      .x-menu .x-btn { display: none; }
+      .x-burger {
+        display: none;
+        width: var(--tap);
+        height: var(--tap);
+        place-items: center;
+        border: 1px solid var(--stroke-primary);
+        border-radius: var(--r-s);
+        background: none;
+        color: var(--text-primary);
+        cursor: pointer;
+      }
+      .x-burger span, .x-burger span::before, .x-burger span::after {
+        display: block; width: 18px; height: 2px; background: currentColor; border-radius: 2px; position: relative;
+        transition: transform var(--dur-quick) var(--ease-out), opacity var(--dur-quick);
+      }
+      .x-burger span::before, .x-burger span::after { content: ""; position: absolute; left: 0; }
+      .x-burger span::before { top: -6px; }
+      .x-burger span::after { top: 6px; }
+      .x-burger[aria-expanded="true"] span { background: transparent; }
+      .x-burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+      .x-burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+      @media (max-width: 1080px) {
+        .x-burger { display: grid; }
+        .x-menu {
+          display: none;
+          position: absolute;
+          top: calc(100% + 8px);
+          left: 0;
+          right: 0;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 4px;
+          padding: 10px;
+          border-radius: var(--r-l);
+          background: var(--x-ink);
+          border: 1px solid var(--stroke-secondary);
+          box-shadow: var(--hark-shadow);
+        }
+        .x-menu.is-open { display: flex; }
+        .x-menu a:not(.x-btn) { min-height: var(--tap); padding: 10px 14px; border-radius: var(--r-s); font-size: var(--size-body); }
+        .x-lang { margin: 6px 0 0; align-self: flex-start; }
+      }
+      @media (max-width: 560px) {
+        .x-header > .x-btn { display: none; }
+        .x-menu .x-btn { display: inline-flex; margin-top: 6px; }
+        .x-logo { font-size: 14px; letter-spacing: 0.04em; }
+      }
+
+      /* Buttons */
+      .x-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        min-height: var(--tap);
+        padding: 10px 18px;
+        border: 1px solid var(--x-yellow);
+        border-radius: var(--r-s);
+        background: var(--x-yellow);
+        color: var(--x-ink);
+        font: var(--weight-bold) var(--size-small)/1.1 var(--sans);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-decoration: none;
+        white-space: nowrap;
+        cursor: pointer;
+        transition: transform var(--dur-quick) var(--ease-out), box-shadow var(--dur-quick);
+      }
+      .x-btn:hover, .x-btn:focus-visible { transform: translateY(-1px); box-shadow: 0 0 0 1px rgb(255 229 59 / 0.6), 0 10px 30px rgb(255 229 59 / 0.32); }
+      .x-btn:focus-visible { outline: 2px solid var(--text-primary); outline-offset: 2px; }
+      .x-btn--ghost { background: transparent; color: var(--text-primary); border-color: rgb(255 255 255 / 0.55); }
+      .x-btn--ghost:hover, .x-btn--ghost:focus-visible { border-color: var(--x-yellow); box-shadow: inset 0 0 0 100px var(--hover-wash), 0 0 22px rgb(255 229 59 / 0.22); }
+
+      /* Type */
+      .x-title {
+        font: var(--weight-bold) clamp(26px, 3.6vw, 40px)/1.08 var(--sans);
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        color: var(--x-yellow);
+      }
+      .x-title::after {
+        content: "";
+        display: block;
+        width: 72px;
+        height: 3px;
+        margin-top: 16px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, var(--x-yellow) 0%, var(--x-yellow) 40%, #fff6b8 50%, var(--x-yellow) 60%) 0 0 / 300% 100%;
+        transform-origin: left;
+      }
+      .js-motion .x-reveal .x-title::after, .js-motion .x-reveal.x-title::after { transform: scaleX(0); transition: transform 900ms var(--ease-out) 200ms; }
+      .js-motion .x-reveal.is-in .x-title::after, .js-motion .x-reveal.is-in.x-title::after { transform: scaleX(1); animation: x-sheen 3.6s linear 1.2s infinite; }
+      @keyframes x-sheen { from { background-position: 100% 0; } to { background-position: -50% 0; } }
+      .x-h3 {
+        font: var(--weight-bold) 17px/1.2 var(--sans);
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: var(--x-yellow);
+      }
+      .x-eyebrow { color: var(--x-yellow); text-transform: uppercase; letter-spacing: 0.08em; font: var(--type-tag); }
+
+      /* Hero */
+      .x-hero { min-height: clamp(560px, 86vh, 760px); }
+      .x-hero .hero__img { scale: 1.12; transform-origin: 62% 50%; will-change: translate, scale; animation: x-kenburns 26s ease-in-out infinite alternate; }
+      @keyframes x-kenburns { from { scale: 1.08; } to { scale: 1.2; } }
+      .x-hero::after { pointer-events: none; }
+      .x-hero .hero__copy { position: relative; z-index: 2; pointer-events: none; }
+      .x-hero .hero__copy a, .x-hero .hero__copy button { pointer-events: auto; }
+
+      /* 3D stage: canvas and hotspots sit over the photo, under the copy */
+      .x-stage { position: absolute; inset: 0; z-index: -2; opacity: 0; transition: opacity 900ms var(--ease-out); touch-action: pan-y; cursor: grab; }
+      .x-stage:active { cursor: grabbing; }
+      .x-stage canvas { display: block; width: 100%; height: 100%; }
+      .x-hero.is-3d .x-stage { opacity: 1; }
+      .x-hero .hero__img { transition: opacity 900ms var(--ease-out); }
+      .x-hero.is-3d .hero__img { opacity: 0; animation-play-state: paused; }
+      .x-hero.is-3d::after {
+        background:
+          linear-gradient(to right, rgb(24 19 17 / 0.94) 0%, rgb(24 19 17 / 0.62) 34%, transparent 60%),
+          linear-gradient(to top, rgb(24 19 17 / 0.75) 0%, transparent 36%);
+      }
+      .x-spots { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+      .x-hero:not(.is-3d) .x-spots { display: none; }
+      .x-spot {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: grid;
+        place-items: center;
+        width: var(--tap);
+        height: var(--tap);
+        margin: -22px 0 0 -22px;
+        border-radius: 50%;
+        pointer-events: auto;
+        text-decoration: none;
+        color: var(--x-ink);
+        transition: opacity var(--dur-quick) var(--ease-out);
+        will-change: transform;
+      }
+      .x-spot__dot {
+        position: relative;
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--x-yellow);
+        box-shadow: 0 0 0 4px rgb(255 229 59 / 0.28), 0 0 18px 4px rgb(255 229 59 / 0.55);
+        transition: transform var(--dur-quick) var(--ease-out);
+      }
+      .x-spot__dot::after {
+        content: "";
+        position: absolute;
+        inset: -8px;
+        border-radius: 50%;
+        border: 1.5px solid rgb(255 229 59 / 0.7);
+        animation: x-ping 2.4s var(--ease-out) infinite;
+      }
+      @keyframes x-ping { 0% { transform: scale(0.5); opacity: 1; } 80%, 100% { transform: scale(1.9); opacity: 0; } }
+      .x-spot__label {
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 2px);
+        translate: -50% 6px;
+        padding: 6px 12px;
+        border-radius: var(--r-pill);
+        background: var(--mat-inverse);
+        -webkit-backdrop-filter: var(--hark-blur);
+        backdrop-filter: var(--hark-blur);
+        border: 1px solid rgb(255 229 59 / 0.45);
+        color: var(--text-primary);
+        font: var(--type-label);
+        width: max-content;
+        max-width: min(220px, 56vw);
+        text-align: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--dur-quick) var(--ease-out), translate var(--dur-quick) var(--ease-out);
+      }
+      .x-spot:hover .x-spot__label, .x-spot:focus-visible .x-spot__label, .x-spot.is-open .x-spot__label { opacity: 1; translate: -50% 0; }
+      .x-spot:hover .x-spot__dot, .x-spot.is-open .x-spot__dot { transform: scale(1.25); }
+      .x-spot:focus-visible { outline: 2px solid var(--x-yellow); outline-offset: 2px; }
+      .x-spot.is-back { opacity: 0.45; }
+      .x-spot.is-off { opacity: 0; pointer-events: none; }
+      .x-hint, .x-3d {
+        position: absolute;
+        z-index: 3;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border-radius: var(--r-pill);
+        background: var(--hero-glass);
+        -webkit-backdrop-filter: var(--hark-blur);
+        backdrop-filter: var(--hark-blur);
+        border: 1px solid var(--hero-glass-stroke);
+        color: var(--hero-text);
+        font: var(--type-tag);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+      }
+      .x-hint { right: clamp(16px, 2.4vw, 24px); bottom: clamp(16px, 2.4vw, 24px); padding: 6px 12px; pointer-events: none; transition: opacity 600ms var(--ease-out); }
+      .x-hint svg { color: var(--x-yellow); }
+      .x-hero:not(.is-3d) .x-hint, .x-hint.is-gone { opacity: 0; }
+      .x-3d { top: clamp(12px, 2vw, 20px); right: clamp(12px, 2vw, 20px); min-height: var(--tap); padding: 0 14px; cursor: pointer; }
+      .x-3d:hover { border-color: var(--x-yellow); }
+      .x-3d:focus-visible { outline: 2px solid var(--x-yellow); outline-offset: 2px; }
+      .x-3d__state { display: inline-block; min-width: 2.2em; padding: 2px 6px; border-radius: var(--r-pill); background: var(--x-ink-3); color: var(--text-secondary); text-align: center; }
+      .x-3d[aria-pressed="true"] .x-3d__state { background: var(--x-yellow); color: var(--x-ink); }
+      .x-3d[hidden] { display: none; }
+      @media (max-width: 760px) {
+        .x-hero.is-3d .hero__copy { padding-top: 330px; }
+        .x-stage { bottom: auto; height: 360px; -webkit-mask-image: linear-gradient(to bottom, #000 78%, transparent); mask-image: linear-gradient(to bottom, #000 78%, transparent); }
+        .x-hero.is-3d::after { background: linear-gradient(to top, rgb(24 19 17 / 0.96) 0%, rgb(24 19 17 / 0.82) 52%, transparent 68%); }
+        .x-hint { left: 16px; right: auto; top: 66px; bottom: auto; }
+      }
+      .x-hero .links .x-btn, .x-form .x-btn { white-space: normal; text-align: center; }
+      .x-title, .x-h3, .x-tagline { overflow-wrap: break-word; hyphens: auto; }
+      .x-hero .hero__copy { max-width: 46rem; gap: 16px; }
+      .x-hero h1 {
+        font: var(--weight-bold) clamp(34px, 6.4vw, 68px)/1.02 var(--sans);
+        text-transform: uppercase;
+        letter-spacing: 0.01em;
+        color: var(--x-yellow);
+      }
+      .x-tagline { font: var(--weight-bold) var(--size-lede)/1.25 var(--sans); text-transform: uppercase; letter-spacing: 0.04em; }
+      .x-hero-text { font-size: var(--size-prose); color: var(--hero-text-muted); max-width: 52ch; }
+      .x-hero .links { gap: 10px; margin-top: 6px; }
+      .x-strip { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: var(--size-small); color: var(--hero-text-muted); }
+      .x-strip a { color: var(--hero-text); text-decoration: none; display: inline-flex; align-items: center; min-height: var(--tap); gap: 8px; }
+      .x-strip a:hover { color: var(--x-yellow); }
+      .x-strip svg { color: var(--x-yellow); flex: none; }
+
+      /* Shared depth on hover */
+      .x-tilt {
+        transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+        transition: transform 400ms var(--ease-out), box-shadow 400ms var(--ease-out);
+      }
+      .x-tilt:hover { box-shadow: var(--hark-shadow); }
+      .x-card-ink.x-tilt, .x-cat.x-tilt { position: relative; }
+      .x-card-ink.x-tilt::before, .x-cat.x-tilt::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgb(255 229 59 / 0.12), transparent 60%);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 400ms var(--ease-out);
+      }
+      .x-card-ink.x-tilt:hover, .x-cat.x-tilt:hover { border-color: rgb(255 229 59 / 0.4); box-shadow: var(--hark-shadow), 0 0 0 1px rgb(255 229 59 / 0.15), 0 18px 50px rgb(255 229 59 / 0.08); }
+      .x-card-ink.x-tilt:hover::before, .x-cat.x-tilt:hover::before { opacity: 1; }
+
+      /* Scroll reveal, only when motion is allowed and the script runs */
+      .js-motion .x-reveal { opacity: 0; translate: 0 26px; }
+      .js-motion .x-reveal.is-in { opacity: 1; translate: 0 0; }
+      .js-motion .x-reveal {
+        transition: opacity 760ms var(--ease-out) var(--d, 0ms), translate 760ms var(--ease-out) var(--d, 0ms), transform 400ms var(--ease-out), box-shadow 400ms var(--ease-out), border-color 400ms var(--ease-out);
+      }
+
+      .x-card-ink { border: 1px solid var(--stroke-secondary); }
+      .x-card-ink p { color: var(--text-secondary); }
+      .x-icon {
+        display: grid;
+        place-items: center;
+        width: 52px;
+        height: 52px;
+        margin-bottom: 16px;
+        border-radius: var(--r-s);
+        background: rgb(255 229 59 / 0.12);
+        color: var(--x-yellow);
+      }
+
+      /* Image tiles */
+      .x-tiles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .x-tile { position: relative; isolation: isolate; min-height: 320px; margin: 0; border-radius: var(--r-l); overflow: hidden; display: flex; align-items: flex-end; }
+      .x-tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+      .x-tile::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to top, rgb(24 19 17 / 0.94) 0%, rgb(24 19 17 / 0.5) 45%, transparent 75%); }
+      .x-tile figcaption { display: grid; gap: 6px; padding: 24px; }
+      .x-tile p { color: var(--text-primary); max-width: 36ch; }
+      @media (max-width: 760px) { .x-tiles { grid-template-columns: minmax(0, 1fr); } .x-tile { min-height: 260px; } }
+
+      /* Sectors band */
+      .x-band { position: relative; isolation: isolate; display: flex; align-items: center; min-height: 440px; padding: clamp(20px, 4vw, 48px); border-radius: var(--r-xl); overflow: hidden; }
+      .x-band > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+      .x-band::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(to right, rgb(24 19 17 / 0.7), rgb(24 19 17 / 0.1) 70%); }
+      .x-supply { width: min(100%, 440px); padding: 28px; border-radius: var(--r-l); background: var(--x-yellow); color: var(--x-ink); box-shadow: 0 20px 50px rgb(0 0 0 / 0.4); }
+      .x-supply h3 { font: var(--weight-bold) 20px/1.2 var(--sans); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 12px; }
+      .x-supply ul { list-style: none; margin: 0; padding: 0; }
+      .x-supply li { display: flex; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid rgb(35 29 27 / 0.18); font: var(--weight-medium) var(--size-body)/1.3 var(--sans); }
+      .x-supply li:last-child { border-bottom: 0; }
+      .x-supply li::before { content: ""; width: 10px; height: 10px; flex: none; background: var(--x-ink); transform: rotate(45deg); }
+
+      /* Products */
+      /* Sticky category switcher: tabs on desktop, scrolling chips on phones */
+      .x-catnav {
+        position: sticky;
+        top: 78px;
+        z-index: 20;
+        display: flex;
+        gap: 6px;
+        list-style: none;
+        margin: 0 0 8px;
+        padding: 6px;
+        border-radius: var(--r-l);
+        background: var(--mat-inverse);
+        -webkit-backdrop-filter: var(--hark-blur);
+        backdrop-filter: var(--hark-blur);
+        border: 1px solid var(--stroke-secondary);
+        box-shadow: var(--hark-shadow);
+        overflow-x: auto;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+      }
+      .x-catnav::-webkit-scrollbar { display: none; }
+      .x-catnav li { flex: none; scroll-snap-align: start; }
+      .x-catnav a { position: relative; display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); padding: 8px 16px; border-radius: var(--r-pill); color: var(--text-secondary); font: var(--type-label); text-decoration: none; white-space: nowrap; transition: background var(--dur-quick) var(--ease-out), color var(--dur-quick) var(--ease-out); }
+      .x-catnav a:hover { color: var(--text-primary); background: var(--x-ink-3); }
+      .x-catnav b { color: var(--x-yellow); font-weight: var(--weight-bold); }
+      .x-catnav a[aria-current="true"] { background: var(--x-yellow); color: var(--x-ink); box-shadow: 0 6px 20px rgb(255 229 59 / 0.25); }
+      .x-catnav a[aria-current="true"] b { color: var(--x-ink); }
+      .x-catnav a:focus-visible { outline: 2px solid var(--x-yellow); outline-offset: -2px; }
+      @media (min-width: 1081px) {
+        .x-catnav { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); overflow: visible; }
+        .x-catnav a { display: grid; align-content: center; gap: 2px; height: 100%; padding: 10px 14px; border-radius: var(--r-m); white-space: normal; line-height: 1.25; }
+      }
+      .x-cats { display: grid; gap: 16px; }
+      .x-cat { display: grid; align-content: start; gap: 20px; padding: clamp(20px, 3vw, 32px); border-radius: var(--r-l); background: var(--fill-tertiary); border: 1px solid var(--stroke-secondary); scroll-margin-top: 170px; }
+      @media (max-width: 1080px) { .x-cat { scroll-margin-top: 150px; } }
+      .x-prods .x-cat.x-tilt { transform-style: preserve-3d; }
+      .x-prods .x-cat.x-tilt > * { transition: transform 500ms var(--ease-out); }
+      .x-prods .x-cat.x-tilt:hover > .x-shot { transform: translateZ(40px); }
+      .x-prods .x-cat.x-tilt:hover > .x-cat__head { transform: translateZ(20px); }
+      .x-cat__head { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 16px; align-items: baseline; }
+      .x-cat__num { font: var(--weight-bold) 40px/1 var(--sans); color: var(--x-yellow); }
+      .x-cat__head h3 { font: var(--weight-bold) clamp(19px, 2vw, 24px)/1.15 var(--sans); text-transform: uppercase; letter-spacing: 0.02em; }
+      .x-cat__head p { grid-column: 2; color: var(--text-secondary); max-width: 68ch; }
+      .x-cat__head .x-eyebrow { grid-column: 2; }
+      .x-subs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; list-style: none; margin: 0; padding: 0; }
+      .x-subs li { padding: 16px 18px; border-radius: var(--r-m); background: var(--x-ink); border-top: 3px solid var(--x-yellow); }
+      .x-subs strong { display: block; margin-bottom: 4px; }
+      .x-subs span { color: var(--text-secondary); font-size: var(--size-small); }
+      .x-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr)); gap: 12px; }
+      .x-shot { margin: 0; display: grid; gap: 8px; align-content: start; }
+      .x-shot__frame { position: relative; display: grid; place-items: center; aspect-ratio: 4 / 3; padding: 14px 14px 22px; border-radius: var(--r-m); background: radial-gradient(120% 90% at 50% 35%, #ffffff 0%, var(--x-paper) 70%); overflow: hidden; }
+      .x-shot__frame::after { content: ""; position: absolute; left: 22%; right: 22%; bottom: 10px; height: 12px; border-radius: 50%; background: radial-gradient(closest-side, rgb(35 29 27 / 0.32), transparent); animation: x-shadow 6s ease-in-out var(--fd, 0s) infinite; }
+      .x-shot__frame img { position: relative; z-index: 1; max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 14px 16px rgb(35 29 27 / 0.3)); transition: transform 400ms var(--ease-out), filter 400ms var(--ease-out); animation: x-float 6s ease-in-out var(--fd, 0s) infinite; }
+      .x-shot:hover .x-shot__frame img { transform: translateY(-6px) scale(1.05); filter: drop-shadow(0 22px 20px rgb(35 29 27 / 0.34)); }
+      .x-shot:nth-child(2) { --fd: -1.5s; }
+      .x-shot:nth-child(3) { --fd: -3s; }
+      .x-shot:nth-child(4) { --fd: -4.5s; }
+      @keyframes x-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+      @keyframes x-shadow { 0%, 100% { transform: scaleX(1); opacity: 1; } 50% { transform: scaleX(0.82); opacity: 0.6; } }
+      .x-shot figcaption { font-size: var(--size-small); color: var(--text-secondary); }
+      .x-prods { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
+      .x-prods .x-cat__head { grid-template-columns: minmax(0, 1fr); }
+      .x-prods .x-cat__head > * { grid-column: 1; }
+      .x-prods .x-cat__num { font-size: 28px; }
+      .x-qlink { justify-self: start; display: inline-flex; align-items: center; gap: 8px; min-height: var(--tap); color: var(--x-yellow); font: var(--type-label); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgb(255 229 59 / 0.45); margin-top: auto; }
+      .x-qlink:hover { text-decoration-color: currentColor; }
+      @media (max-width: 760px) {
+        .x-subs { grid-template-columns: minmax(0, 1fr); }
+        .x-cat__head { grid-template-columns: minmax(0, 1fr); }
+        .x-cat__head > * { grid-column: 1 !important; }
+        .x-cat__num { font-size: 30px; }
+      }
+
+      /* HSE pillars */
+      .x-pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 10px; list-style: none; margin: 0; padding: 0; }
+      .x-pillars li { display: flex; align-items: center; gap: 12px; padding: 12px 18px 12px 12px; border-radius: var(--r-pill); background: var(--fill-tertiary); border: 1px solid var(--stroke-secondary); font: var(--type-body-strong); }
+      .x-pillars svg { flex: none; width: 36px; height: 36px; padding: 8px; border-radius: 50%; background: var(--x-yellow); color: var(--x-ink); }
+      .x-ph-chip { display: inline-block; margin-bottom: 10px; padding: 3px 10px; border-radius: var(--r-pill); border: 1px dashed var(--stroke-primary); font: var(--type-tag); color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.06em; }
+
+      /* Contact */
+      .x-contact { display: grid; gap: 14px; margin: 0; }
+      .x-contact > div { display: grid; gap: 4px; padding-bottom: 14px; border-bottom: 1px solid var(--stroke-secondary); }
+      .x-contact dt { font: var(--type-tag); text-transform: uppercase; letter-spacing: 0.08em; color: var(--x-yellow); }
+      .x-contact dd { margin: 0; font: var(--weight-medium) var(--size-heading)/1.3 var(--sans); overflow-wrap: anywhere; }
+      .x-contact dd a { color: var(--text-primary); text-decoration: none; display: inline-flex; align-items: center; min-height: var(--tap); }
+      .x-contact dd a:hover { color: var(--x-yellow); }
+      .x-ph { display: inline-block; padding: 6px 12px; border: 1.5px dashed var(--stroke-primary); border-radius: var(--r-s); color: var(--text-secondary); font: var(--type-body); font-style: italic; }
+      .x-form { display: grid; gap: 14px; padding: clamp(20px, 3vw, 30px); border-radius: var(--r-l); background: var(--fill-tertiary); border: 1px solid var(--stroke-secondary); }
+      .x-form h3 { margin-bottom: 4px; }
+      .x-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+      .x-field { display: grid; gap: 6px; align-content: start; }
+      .x-field label { font: var(--type-label); }
+      .x-field label .x-req { color: var(--x-yellow); }
+      .x-field input, .x-field select, .x-field textarea {
+        width: 100%;
+        min-height: var(--tap);
+        padding: 10px 12px;
+        border: 1px solid var(--stroke-primary);
+        border-radius: var(--r-s);
+        background: var(--x-ink);
+        color: var(--text-primary);
+        font: var(--type-body);
+      }
+      .x-field textarea { min-height: 130px; resize: vertical; }
+      .x-field :is(input, select, textarea):focus { outline: none; border-color: var(--x-yellow); box-shadow: 0 0 0 3px rgb(255 229 59 / 0.2); }
+      .x-field [aria-invalid="true"] { border-color: var(--x-error); }
+      .x-err { min-height: 0; font-size: var(--size-small); color: var(--x-error); }
+      .x-err:empty { display: none; }
+      .x-form .x-btn { justify-self: start; }
+      .x-status { font-size: var(--size-small); color: var(--x-yellow); }
+      .x-status:empty { display: none; }
+      @media (max-width: 600px) { .x-row { grid-template-columns: minmax(0, 1fr); } .x-form .x-btn { justify-self: stretch; } }
+
+      /* Footer */
+      .x-foot { align-items: flex-start; }
+      .x-foot-brand { display: grid; gap: 6px; max-width: 30ch; }
+      .x-foot-brand .x-logo { min-height: var(--tap); }
+      .x-foot-contact { display: grid; gap: 0; }
+      .x-foot-contact a { color: var(--text-primary); text-decoration: none; display: inline-flex; align-items: center; min-height: var(--tap); }
+      .x-foot-contact a:hover { color: var(--x-yellow); }
+      .x-copy { flex-basis: 100%; padding-top: 16px; border-top: 1px solid var(--stroke-secondary); font-size: var(--size-caption); }
+
+      .x-illus { flex-basis: 100%; font-size: var(--size-caption); color: var(--text-secondary); }
+
+      @media (prefers-reduced-motion: reduce) {
+        .x-tilt, .x-btn, .x-shot__frame img, .x-prods .x-cat.x-tilt > * { transition: none; transform: none !important; }
+        .x-hero .hero__img { scale: 1; translate: none; animation: none; }
+        .x-shot__frame img, .x-shot__frame::after, .x-spot__dot::after, .x-title::after { animation: none !important; }
+        .x-stage, .x-hint, .x-spot, .x-spot__label, .x-catnav a { transition: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page" id="top">
+      <header class="x-header" id="site-header">
+        <a class="x-logo" href="#home" aria-label="INFINITY SOURCES, LDA, back to top" data-i18n-aria="nav.logo">INFINITY SOURCES, LDA</a>
+        <nav class="x-menu" id="site-menu" aria-label="Main" data-i18n-aria="nav.main">
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#sectors" data-i18n="nav.sectors">Sectors</a>
+          <a href="#products" data-i18n="nav.products">Products &amp; Services</a>
+          <a href="#hse" data-i18n="nav.hse">HSE</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <div class="x-lang" role="group" aria-label="Language" data-i18n-aria="nav.lang">
+            <button type="button" data-lang="en" lang="en" aria-pressed="true" aria-label="English">EN</button><span class="x-lang__sep" aria-hidden="true">|</span><button type="button" data-lang="pt" lang="pt" aria-pressed="false" aria-label="Português">PT</button>
+            <span class="x-sr" id="lang-live" aria-live="polite"></span>
+          </div>
+          <a class="x-btn" href="#contact" data-i18n="cta.quote">Request a Quote</a>
+        </nav>
+        <a class="x-btn" href="#contact" data-i18n="cta.quote">Request a Quote</a>
+        <button class="x-burger" type="button" aria-controls="site-menu" aria-expanded="false" aria-label="Open menu" data-i18n-aria="nav.open"><span></span></button>
+      </header>
+
+      <main class="main">
+        <!-- 1. Hero -->
+        <section class="hero x-hero" id="home">
+          <img class="hero__img" src="hero-mining.png" alt="An open-pit mine at golden hour" data-i18n-alt="hero.alt" fetchpriority="high" />
+          <div class="x-stage" id="hero-stage" role="img" aria-label="Interactive 3D supply hub: generator, drill bit and gear, cable reel, transformer and pylon, safety helmet, security camera and network cabinet" data-i18n-aria="hero.sceneLabel"></div>
+          <div class="x-spots" id="hero-spots">
+            <a class="x-spot" href="#cat-mining" data-spot="mining"><span class="x-spot__dot" aria-hidden="true"></span><span class="x-spot__label" data-i18n="hot.mining">Mining Consumables</span></a>
+            <a class="x-spot" href="#cat-generators" data-spot="generators"><span class="x-spot__dot" aria-hidden="true"></span><span class="x-spot__label" data-i18n="hot.gen">Generators &amp; Motors</span></a>
+            <a class="x-spot" href="#cat-power" data-spot="power"><span class="x-spot__dot" aria-hidden="true"></span><span class="x-spot__label" data-i18n="hot.power">Power Material</span></a>
+            <a class="x-spot" href="#cat-ppe" data-spot="ppe"><span class="x-spot__dot" aria-hidden="true"></span><span class="x-spot__label" data-i18n="hot.ppe">PPE &amp; Safety</span></a>
+            <a class="x-spot" href="#cat-security" data-spot="security"><span class="x-spot__dot" aria-hidden="true"></span><span class="x-spot__label" data-i18n="hot.sec">Electronic Security</span></a>
+            <a class="x-spot" href="#cat-network" data-spot="network"><span class="x-spot__dot" aria-hidden="true"></span><span class="x-spot__label" data-i18n="hot.net">Network Installation</span></a>
+          </div>
+          <p class="x-hint" id="hero-hint" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 10V4a2 2 0 0 0-4 0v6"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.4l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg><span data-i18n="hero.hint">Drag to explore</span></p>
+          <button class="x-3d" id="hero-3d" type="button" aria-pressed="false" aria-label="3D scene" data-i18n-aria="hero.3dLabel" hidden><span data-i18n="hero.3d">3D</span> <span class="x-3d__state" id="hero-3d-state">Off</span></button>
+          <div class="hero__copy">
+            <p class="hero__eyebrow" data-i18n="hero.eyebrow">Industrial supply · Mozambique</p>
+            <h1>INFINITY SOURCES, LDA</h1>
+            <p class="x-tagline" data-i18n="hero.tagline">Connecting processes from source to customer</p>
+            <p class="x-hero-text" data-i18n="hero.subline">We facilitate the seamless movement of goods, information and value from origin to consumer.</p>
+            <p class="x-hero-text" data-i18n="hero.short">Industrial equipment, consumables and technical services for mining, manufacturing and heavy construction across Mozambique.</p>
+            <div class="links">
+              <a class="x-btn" href="#contact" data-i18n="cta.quote">Request a Quote</a>
+              <a class="x-btn x-btn--ghost" href="#products" data-i18n="hero.products">Our Products &amp; Services</a>
+            </div>
+            <p class="x-strip">
+              <a href="tel:+258874300000"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>+258 87 430 0000</a>
+              <a href="mailto:infinitysourceslda@gmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>infinitysourceslda@gmail.com</a>
+            </p>
+          </div>
+        </section>
+
+        <!-- 2. About -->
+        <section class="section" id="about" data-nav="About">
+          <div class="head">
+            <p class="head__eyebrow x-eyebrow" data-i18n="about.eyebrow">About us</p>
+            <h2 class="x-title" data-i18n="about.title">A professional industrial supply and services company</h2>
+          </div>
+          <div class="pair">
+            <div class="prose">
+              <p data-i18n="about.p1">INFINITY SOURCES, LDA is a professional industrial supply and services company. We specialise in providing high-quality electrical materials, generators, electrical motors, mining consumables and machinery spare parts.</p>
+            </div>
+            <div class="prose">
+              <h3 class="x-h3" data-i18n="about.identity">Corporate identity</h3>
+              <p data-i18n="about.p2">We are a dynamic, growing industrial supply partner serving mining, manufacturing and heavy construction. Founded on the principle of reliability, INFINITY SOURCES, LDA operates across Mozambique, delivering world-class equipment and engineering services.</p>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="x-card-ink x-tilt">
+              <h3 class="x-h3" data-i18n="about.missionT">Our Mission</h3>
+              <p data-i18n="about.mission">To deliver superior industrial equipment and technical support that powers progress and minimises downtime.</p>
+            </div>
+            <div class="x-card-ink x-tilt">
+              <h3 class="x-h3" data-i18n="about.visionT">Our Vision</h3>
+              <p data-i18n="about.vision">To be the preferred partner for heavy industry in southern Africa.</p>
+            </div>
+            <div class="x-card-ink x-tilt">
+              <h3 class="x-h3" data-i18n="about.commitT">Our Commitment</h3>
+              <p data-i18n="about.commit">A comprehensive product portfolio, dedicated service and a commitment to industrial excellence.</p>
+            </div>
+          </div>
+          <h3 class="x-h3" data-i18n="about.why">Why it matters</h3>
+          <div class="x-tiles">
+            <figure class="x-tile">
+              <img src="efficiency-boxes.jpg" alt="Stacked supply boxes in a warehouse" data-i18n-alt="about.effAlt" loading="lazy" decoding="async" />
+              <figcaption>
+                <span class="x-h3" data-i18n="about.effT">Efficiency</span>
+                <p data-i18n="about.eff">Reliable sourcing and supply that keeps your operations moving.</p>
+              </figcaption>
+            </figure>
+            <figure class="x-tile">
+              <img src="reduce-cost.jpg" alt="A calculator resting on an invoice" data-i18n-alt="about.costAlt" loading="lazy" decoding="async" />
+              <figcaption>
+                <span class="x-h3" data-i18n="about.costT">Reduce Costs</span>
+                <p data-i18n="about.cost">Sourcing the right materials to help control operating costs.</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 3. Sectors -->
+        <section class="section" id="sectors" data-nav="Sectors">
+          <div class="head">
+            <p class="head__eyebrow x-eyebrow" data-i18n="sectors.eyebrow">Sectors we serve</p>
+            <h2 class="x-title" data-i18n="sectors.title">Supply for the industries that keep Mozambique moving</h2>
+          </div>
+          <div class="cards">
+            <div class="x-card-ink x-tilt">
+              <span class="x-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4.5c2.5-1 5.5-.5 7 1-2.5 0-5 .7-7 2.3"/><path d="M14.5 4.5c-1.6 1.6-2.3 4.1-2.3 7"/><path d="m13 6-10 10 2.5 2.5 10-10"/><path d="M2 21h20"/></svg></span>
+              <h3 class="x-h3" data-i18n="sectors.miningT">Mining</h3>
+              <p data-i18n="sectors.mining">Mining consumables, machinery spare parts, power and safety supplies for mine sites.</p>
+            </div>
+            <div class="x-card-ink x-tilt">
+              <span class="x-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 21V10l6 4V10l6 4V6l3-3h3v18Z"/><path d="M6 17h2M11 17h2M16 17h2"/></svg></span>
+              <h3 class="x-h3" data-i18n="sectors.manuT">Manufacturing</h3>
+              <p data-i18n="sectors.manu">Electrical materials, motors and industrial consumables for production lines.</p>
+            </div>
+            <div class="x-card-ink x-tilt">
+              <span class="x-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V3h3l11 4H9"/><path d="M6 7 9 3M6 11h3M6 15h3"/><path d="M18 7v5"/><rect x="16" y="12" width="4" height="3"/><path d="M3 21h8"/></svg></span>
+              <h3 class="x-h3" data-i18n="sectors.consT">Heavy Construction</h3>
+              <p data-i18n="sectors.cons">Generators, power material and PPE for construction sites and infrastructure work.</p>
+            </div>
+          </div>
+          <div class="x-band">
+            <img src="warehouse.jpg" alt="Warehouse racking stocked with supplies" data-i18n-alt="sectors.bandAlt" loading="lazy" decoding="async" />
+            <div class="x-supply">
+              <h3 data-i18n="sectors.coreT">Our core supply areas</h3>
+              <ul>
+                <li data-i18n="core.1">Mining Consumables</li>
+                <li data-i18n="core.2">Generators &amp; Electrical Motors</li>
+                <li data-i18n="core.3">Power Material</li>
+                <li data-i18n="core.4">PPE &amp; Safety</li>
+                <li data-i18n="core.5">Electronic Security Systems</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Products & Services -->
+        <section class="section" id="products" data-nav="Products">
+          <div class="head">
+            <p class="head__eyebrow x-eyebrow" data-i18n="prod.eyebrow">Products &amp; Services</p>
+            <h2 class="x-title" data-i18n="prod.title">Equipment, consumables and installations from one supplier</h2>
+            <p class="head__sub" data-i18n="prod.sub">Six categories. Jump to one, then request a quote for it.</p>
+          </div>
+          <ul class="x-catnav" aria-label="Product categories">
+            <li><a href="#cat-mining"><b>01</b> <span data-i18n="cat.mining">Mining Materials &amp; Consumables</span></a></li>
+            <li><a href="#cat-generators"><b>02</b> <span data-i18n="cat.gen">Generators &amp; Electrical Motors</span></a></li>
+            <li><a href="#cat-power"><b>03</b> <span data-i18n="cat.power">Power Material</span></a></li>
+            <li><a href="#cat-ppe"><b>04</b> <span data-i18n="cat.ppe">PPE &amp; Safety</span></a></li>
+            <li><a href="#cat-security"><b>05</b> <span data-i18n="cat.sec">Electronic Security Systems</span></a></li>
+            <li><a href="#cat-network"><b>06</b> <span data-i18n="cat.net">Network Installation &amp; Connectivity Infrastructure</span></a></li>
+          </ul>
+          <div class="x-cats">
+            <article class="x-cat x-tilt" id="cat-mining" data-tilt="1.6">
+              <div class="x-cat__head">
+                <p class="x-cat__num">01</p>
+                <h3 data-i18n="cat.mining">Mining Materials &amp; Consumables</h3>
+              </div>
+              <ul class="x-subs">
+                <li><strong data-i18n="mining.drillT">Drilling &amp; Excavation</strong><span data-i18n="mining.drill">Drill rods, button bits, shank adapters and cutting tools.</span></li>
+                <li><strong data-i18n="mining.slurryT">Slurry &amp; Fluid Handling</strong><span data-i18n="mining.slurry">Wear-resistant slurry hoses, high-pressure valves and pumps.</span></li>
+                <li><strong data-i18n="mining.ventT">Ventilation Systems</strong><span data-i18n="mining.vent">Flexible ducting, high-capacity fans and air purification.</span></li>
+                <li><strong data-i18n="mining.consT">Industrial Consumables</strong><span data-i18n="mining.cons">Abrasives and grinding media, high-tensile fasteners and lubricants.</span></li>
+              </ul>
+              <div class="x-gallery">
+                <figure class="x-shot x-tilt"><div class="x-shot__frame"><img src="mining-crusher.png" alt="Mobile jaw crusher" data-i18n-alt="mining.img1" loading="lazy" decoding="async" /></div><figcaption data-i18n="mining.img1">Mobile jaw crusher</figcaption></figure>
+                <figure class="x-shot x-tilt"><div class="x-shot__frame"><img src="mining-impact-crusher.png" alt="Orange hammer and impact crushers" data-i18n-alt="mining.img2" loading="lazy" decoding="async" /></div><figcaption data-i18n="mining.img2">Hammer and impact crushers</figcaption></figure>
+                <figure class="x-shot x-tilt"><div class="x-shot__frame"><img src="mining-rubber.png" alt="Rubber sheet and hose roll" data-i18n-alt="mining.img3" loading="lazy" decoding="async" /></div><figcaption data-i18n="mining.img3">Rubber sheet and hose</figcaption></figure>
+                <figure class="x-shot x-tilt"><div class="x-shot__frame"><img src="mining-conveyor-rollers.png" alt="Conveyor idler rollers" data-i18n-alt="mining.img4" loading="lazy" decoding="async" /></div><figcaption data-i18n="mining.img4">Conveyor idler rollers</figcaption></figure>
+              </div>
+              <a class="x-qlink" href="#contact" data-cat="mining"><span data-i18n="cta.this">Request a quote for this</span> <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="x-cat x-tilt" id="cat-generators" data-tilt="1.6">
+              <div class="x-cat__head">
+                <p class="x-cat__num">02</p>
+                <h3 data-i18n="cat.gen">Generators &amp; Electrical Motors</h3>
+                <p data-i18n="gen.desc">Supply of generators and electrical motors for industrial operations.</p>
+              </div>
+              <div class="x-gallery">
+                <figure class="x-shot x-tilt"><div class="x-shot__frame"><img src="generator-mobile.png" alt="Towable mobile generator" data-i18n-alt="gen.img1" loading="lazy" decoding="async" /></div><figcaption data-i18n="gen.img1">Mobile generator</figcaption></figure>
+                <figure class="x-shot x-tilt"><div class="x-shot__frame"><img src="generator-diesel.png" alt="Enclosed diesel generator set" data-i18n-alt="gen.img2" loading="lazy" decoding="async" /></div><figcaption data-i18n="gen.img2">Enclosed diesel generator set</figcaption></figure>
+                <figure class="x-shot x-tilt"><div class="x-shot__frame"><img src="electric-motor.png" alt="Blue electric motor" data-i18n-alt="gen.img3" loading="lazy" decoding="async" /></div><figcaption data-i18n="gen.img3">Electric motor</figcaption></figure>
+              </div>
+              <a class="x-qlink" href="#contact" data-cat="generators"><span data-i18n="cta.this">Request a quote for this</span> <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="x-cat x-tilt" id="cat-power" data-tilt="1.6">
+              <div class="x-cat__head">
+                <p class="x-cat__num">03</p>
+                <h3 data-i18n="cat.power">Power Material</h3>
+                <p class="x-eyebrow" data-i18n="power.sub">High-voltage &amp; low-voltage power solutions</p>
+                <p data-i18n="power.desc">High-performance electrical materials engineered to meet strict international safety standards, ensuring uninterrupted power flow and system protection.</p>
+              </div>
+              <div class="x-gallery">
+                <figure class="x-shot x-tilt"><div class="x-shot__frame"><img src="power-cables.png" alt="Armoured power cables" data-i18n-alt="power.img1" loading="lazy" decoding="async" /></div><figcaption data-i18n="power.img1">Armoured power cables</figcaption></figure>
+                <figure class="x-shot x-tilt"><div class="x-shot__frame"><img src="power-transformer.png" alt="Distribution transformer" data-i18n-alt="power.img2" loading="lazy" decoding="async" /></div><figcaption data-i18n="power.img2">Distribution transformer</figcaption></figure>
+                <figure class="x-shot x-tilt"><div class="x-shot__frame"><img src="power-lv-materials.png" alt="Low-voltage breakers, meter, sockets and wire" data-i18n-alt="power.img3" loading="lazy" decoding="async" /></div><figcaption data-i18n="power.img3">Low-voltage breakers, meters, sockets and wire</figcaption></figure>
+              </div>
+              <a class="x-qlink" href="#contact" data-cat="power"><span data-i18n="cta.this">Request a quote for this</span> <span aria-hidden="true">→</span></a>
+            </article>
+
+            <div class="x-prods">
+              <article class="x-cat x-tilt" id="cat-ppe">
+                <figure class="x-shot"><div class="x-shot__frame"><img src="ppe-kit.png" alt="PPE kit: helmet, boots, ear muffs, gloves and safety cones" data-i18n-alt="ppe.alt" loading="lazy" decoding="async" /></div></figure>
+                <div class="x-cat__head">
+                  <p class="x-cat__num">04</p>
+                  <h3 data-i18n="cat.ppe">PPE &amp; Safety</h3>
+                  <p data-i18n="ppe.desc">Personal protective equipment and workplace safety supplies to protect personnel on site.</p>
+                </div>
+                <a class="x-qlink" href="#contact" data-cat="ppe"><span data-i18n="cta.this">Request a quote for this</span> <span aria-hidden="true">→</span></a>
+              </article>
+              <article class="x-cat x-tilt" id="cat-security">
+                <figure class="x-shot"><div class="x-shot__frame"><img src="security-camera.png" alt="Dome CCTV security camera" data-i18n-alt="sec.alt" loading="lazy" decoding="async" /></div></figure>
+                <div class="x-cat__head">
+                  <p class="x-cat__num">05</p>
+                  <h3 data-i18n="cat.sec">Electronic Security Systems</h3>
+                  <p data-i18n="sec.desc">Advanced electronic security systems designed to meet international standards, providing real-time monitoring, data protection and enhanced security for residential, commercial and industrial environments.</p>
+                </div>
+                <a class="x-qlink" href="#contact" data-cat="security"><span data-i18n="cta.this">Request a quote for this</span> <span aria-hidden="true">→</span></a>
+              </article>
+              <article class="x-cat x-tilt" id="cat-network">
+                <figure class="x-shot"><div class="x-shot__frame"><img src="network-switch.png" alt="Network switch with blue patch cables" data-i18n-alt="net.alt" loading="lazy" decoding="async" /></div></figure>
+                <div class="x-cat__head">
+                  <p class="x-cat__num">06</p>
+                  <h3 data-i18n="cat.net">Network Installation &amp; Connectivity Infrastructure</h3>
+                  <p data-i18n="net.desc">Reliable network infrastructure designed to meet international standards, ensuring seamless connectivity for residential, commercial and industrial environments.</p>
+                </div>
+                <a class="x-qlink" href="#contact" data-cat="network"><span data-i18n="cta.this">Request a quote for this</span> <span aria-hidden="true">→</span></a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. HSE -->
+        <section class="section" id="hse" data-nav="HSE">
+          <div class="head">
+            <p class="head__eyebrow x-eyebrow" data-i18n="hse.eyebrow">Quality Assurance &amp; Safety</p>
+            <h2 class="x-title" data-i18n="hse.title">HSE Compliance (Health, Safety &amp; Environment)</h2>
+          </div>
+          <div class="prose">
+            <p data-i18n="hse.text">We are committed to advancing health, safety and environmental excellence by supplying compliant products and innovative solutions that protect personnel, assets and the environment. Our approach supports risk mitigation, regulatory compliance, accident prevention, environmental conservation and the adoption of industry best practices, ensuring safer workplaces and sustainable operations for industrial, commercial and infrastructure projects.</p>
+          </div>
+          <ul class="x-pillars">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span data-i18n="hse.p1">Risk mitigation</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="m9 12 2 2 4-4"/></svg><span data-i18n="hse.p2">Regulatory compliance</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg><span data-i18n="hse.p3">Accident prevention</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10z"/><path d="M2 21c0-3 1.9-5.4 5-6"/></svg><span data-i18n="hse.p4">Environmental conservation</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg><span data-i18n="hse.p5">Industry best practices</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 18h20"/><path d="M4 18v-2a8 8 0 0 1 16 0v2"/><path d="M10 8V5h4v3"/></svg><span data-i18n="hse.p6">Safer workplaces</span></li>
+          </ul>
+          <div class="aside">
+            <p class="x-ph-chip" data-i18n="ph.label">Placeholder</p>
+            <h3 data-i18n="hse.cert">[Certifications — to be completed by Infinity Sources]</h3>
+          </div>
+        </section>
+
+        <!-- 6. Contact -->
+        <section class="section" id="contact" data-nav="Contact">
+          <div class="head">
+            <p class="head__eyebrow x-eyebrow" data-i18n="contact.eyebrow">Contact / Request a Quote</p>
+            <h2 class="x-title" data-i18n="contact.title">A strong partnership is vital to your business.</h2>
+          </div>
+          <div class="pair">
+            <dl class="x-contact">
+              <div><dt data-i18n="contact.phone">Phone</dt><dd><a href="tel:+258874300000">+258 87 430 0000</a></dd></div>
+              <div><dt data-i18n="contact.email">Email</dt><dd><a href="mailto:infinitysourceslda@gmail.com">infinitysourceslda@gmail.com</a></dd></div>
+              <div><dt data-i18n="contact.web">Website</dt><dd>www.infinitysources.com</dd></div>
+              <div><dt data-i18n="contact.address">Address</dt><dd><span class="x-ph" data-i18n="ph.address">[Address — to be completed]</span></dd></div>
+              <div><dt data-i18n="contact.hours">Business hours</dt><dd><span class="x-ph" data-i18n="ph.hours">[Business hours — to be completed]</span></dd></div>
+              <div><dt data-i18n="contact.social">Social</dt><dd><span class="x-ph" data-i18n="ph.social">[LinkedIn / Facebook / WhatsApp — to be completed]</span></dd></div>
+            </dl>
+            <form class="x-form" id="quote-form" novalidate>
+              <h3 class="x-h3" data-i18n="form.title">Request a Quote</h3>
+              <div class="x-row">
+                <div class="x-field">
+                  <label for="f-name"><span data-i18n="form.name">Name</span> <span class="x-req" aria-hidden="true">*</span></label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name" />
+                  <p class="x-err" id="e-name" aria-live="polite"></p>
+                </div>
+                <div class="x-field">
+                  <label for="f-company" data-i18n="form.company">Company</label>
+                  <input id="f-company" name="company" type="text" autocomplete="organization" />
+                </div>
+              </div>
+              <div class="x-row">
+                <div class="x-field">
+                  <label for="f-email"><span data-i18n="form.email">Email</span> <span class="x-req" aria-hidden="true">*</span></label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="e-email" />
+                  <p class="x-err" id="e-email" aria-live="polite"></p>
+                </div>
+                <div class="x-field">
+                  <label for="f-phone" data-i18n="form.phone">Phone</label>
+                  <input id="f-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="e-phone" />
+                  <p class="x-err" id="e-phone" aria-live="polite"></p>
+                </div>
+              </div>
+              <div class="x-field">
+                <label for="f-cat"><span data-i18n="form.cat">Product category</span> <span class="x-req" aria-hidden="true">*</span></label>
+                <select id="f-cat" name="category" required aria-describedby="e-cat">
+                  <option value="" data-i18n="form.choose">Choose a category</option>
+                  <option value="mining" data-i18n="cat.mining">Mining Materials &amp; Consumables</option>
+                  <option value="generators" data-i18n="cat.gen">Generators &amp; Electrical Motors</option>
+                  <option value="power" data-i18n="cat.power">Power Material</option>
+                  <option value="ppe" data-i18n="cat.ppe">PPE &amp; Safety</option>
+                  <option value="security" data-i18n="cat.sec">Electronic Security Systems</option>
+                  <option value="network" data-i18n="opt.net">Network Installation</option>
+                  <option value="other" data-i18n="opt.other">Other</option>
+                </select>
+                <p class="x-err" id="e-cat" aria-live="polite"></p>
+              </div>
+              <div class="x-field">
+                <label for="f-msg"><span data-i18n="form.msg">Message</span> <span class="x-req" aria-hidden="true">*</span></label>
+                <textarea id="f-msg" name="message" required aria-describedby="e-msg" placeholder="Products, quantities, delivery location and timing" data-i18n-placeholder="form.msgPh"></textarea>
+                <p class="x-err" id="e-msg" aria-live="polite"></p>
+              </div>
+              <button class="x-btn" type="submit" data-i18n="form.send">Send request</button>
+              <p class="x-status" id="form-status" role="status"></p>
+              <p class="fineprint" data-i18n="form.note">Your email app will open to send the request.</p>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <footer class="foot x-foot">
+        <div class="x-foot-brand">
+          <a class="x-logo" href="#home">INFINITY SOURCES, LDA</a>
+          <p data-i18n="hero.tagline">Connecting processes from source to customer</p>
+        </div>
+        <nav aria-label="Quick links" data-i18n-aria="foot.links">
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#sectors" data-i18n="nav.sectors">Sectors</a>
+          <a href="#products" data-i18n="nav.products">Products &amp; Services</a>
+          <a href="#hse" data-i18n="nav.hse">HSE</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="x-foot-contact">
+          <a href="tel:+258874300000">+258 87 430 0000</a>
+          <a href="mailto:infinitysourceslda@gmail.com">infinitysourceslda@gmail.com</a>
+          <span>www.infinitysources.com</span>
+        </div>
+        <p class="x-illus" data-i18n="foot.illus">Images are illustrative of product categories.</p>
+        <p class="x-copy">© <span id="year"></span> INFINITY SOURCES, LDA. <span data-i18n="foot.rights">All rights reserved.</span></p>
+      </footer>
+    </div>
+    <script src="hark.js"></script>
+    <script>
+      /* Every visible string lives here, keyed to data-i18n attributes. Add a "pt" block to translate. */
+      const i18n = {
+        en: {
+          "nav.home": "Home",
+          "nav.about": "About",
+          "nav.sectors": "Sectors",
+          "nav.products": "Products & Services",
+          "nav.hse": "HSE",
+          "nav.contact": "Contact",
+          "meta.title": "INFINITY SOURCES, LDA · Industrial supply and technical services in Mozambique",
+          "meta.desc": "Industrial equipment, consumables and technical services for mining, manufacturing and heavy construction across Mozambique.",
+          "nav.lang": "Language",
+          "lang.now": "Language: English",
+          "nav.logo": "INFINITY SOURCES, LDA, back to top",
+          "nav.main": "Main",
+          "foot.links": "Quick links",
+          "nav.open": "Open menu",
+          "nav.close": "Close menu",
+          "cta.quote": "Request a Quote",
+          "cta.this": "Request a quote for this",
+          "hero.alt": "An open-pit mine at golden hour",
+          "hero.eyebrow": "Industrial supply · Mozambique",
+          "hero.tagline": "Connecting processes from source to customer",
+          "hero.subline": "We facilitate the seamless movement of goods, information and value from origin to consumer.",
+          "hero.sceneLabel": "Interactive 3D supply hub: generator, drill bit and gear, cable reel, transformer and pylon, safety helmet, security camera and network cabinet",
+          "hero.hint": "Drag to explore",
+          "hero.3d": "3D",
+          "hero.on": "On",
+          "hero.off": "Off",
+          "hero.3dLabel": "3D scene",
+          "hot.mining": "Mining Consumables",
+          "hot.gen": "Generators & Motors",
+          "hot.power": "Power Material",
+          "hot.ppe": "PPE & Safety",
+          "hot.sec": "Electronic Security",
+          "hot.net": "Network Installation",
+          "hero.short": "Industrial equipment, consumables and technical services for mining, manufacturing and heavy construction across Mozambique.",
+          "hero.products": "Our Products & Services",
+          "about.eyebrow": "About us",
+          "about.title": "A professional industrial supply and services company",
+          "about.p1": "INFINITY SOURCES, LDA is a professional industrial supply and services company. We specialise in providing high-quality electrical materials, generators, electrical motors, mining consumables and machinery spare parts.",
+          "about.identity": "Corporate identity",
+          "about.p2": "We are a dynamic, growing industrial supply partner serving mining, manufacturing and heavy construction. Founded on the principle of reliability, INFINITY SOURCES, LDA operates across Mozambique, delivering world-class equipment and engineering services.",
+          "about.missionT": "Our Mission",
+          "about.mission": "To deliver superior industrial equipment and technical support that powers progress and minimises downtime.",
+          "about.visionT": "Our Vision",
+          "about.vision": "To be the preferred partner for heavy industry in southern Africa.",
+          "about.commitT": "Our Commitment",
+          "about.commit": "A comprehensive product portfolio, dedicated service and a commitment to industrial excellence.",
+          "about.why": "Why it matters",
+          "about.effT": "Efficiency",
+          "about.eff": "Reliable sourcing and supply that keeps your operations moving.",
+          "about.effAlt": "Stacked supply boxes in a warehouse",
+          "about.costT": "Reduce Costs",
+          "about.cost": "Sourcing the right materials to help control operating costs.",
+          "about.costAlt": "A calculator resting on an invoice",
+          "sectors.eyebrow": "Sectors we serve",
+          "sectors.title": "Supply for the industries that keep Mozambique moving",
+          "sectors.miningT": "Mining",
+          "sectors.mining": "Mining consumables, machinery spare parts, power and safety supplies for mine sites.",
+          "sectors.manuT": "Manufacturing",
+          "sectors.manu": "Electrical materials, motors and industrial consumables for production lines.",
+          "sectors.consT": "Heavy Construction",
+          "sectors.cons": "Generators, power material and PPE for construction sites and infrastructure work.",
+          "sectors.bandAlt": "Warehouse racking stocked with supplies",
+          "sectors.coreT": "Our core supply areas",
+          "core.1": "Mining Consumables",
+          "core.2": "Generators & Electrical Motors",
+          "core.3": "Power Material",
+          "core.4": "PPE & Safety",
+          "core.5": "Electronic Security Systems",
+          "prod.eyebrow": "Products & Services",
+          "prod.title": "Equipment, consumables and installations from one supplier",
+          "prod.sub": "Six categories. Jump to one, then request a quote for it.",
+          "cat.mining": "Mining Materials & Consumables",
+          "cat.gen": "Generators & Electrical Motors",
+          "cat.power": "Power Material",
+          "cat.ppe": "PPE & Safety",
+          "cat.sec": "Electronic Security Systems",
+          "cat.net": "Network Installation & Connectivity Infrastructure",
+          "mining.drillT": "Drilling & Excavation",
+          "mining.drill": "Drill rods, button bits, shank adapters and cutting tools.",
+          "mining.slurryT": "Slurry & Fluid Handling",
+          "mining.slurry": "Wear-resistant slurry hoses, high-pressure valves and pumps.",
+          "mining.ventT": "Ventilation Systems",
+          "mining.vent": "Flexible ducting, high-capacity fans and air purification.",
+          "mining.consT": "Industrial Consumables",
+          "mining.cons": "Abrasives and grinding media, high-tensile fasteners and lubricants.",
+          "mining.img1": "Mobile jaw crusher",
+          "mining.img2": "Hammer and impact crushers",
+          "mining.img3": "Rubber sheet and hose",
+          "mining.img4": "Conveyor idler rollers",
+          "gen.desc": "Supply of generators and electrical motors for industrial operations.",
+          "gen.img1": "Mobile generator",
+          "gen.img2": "Enclosed diesel generator set",
+          "gen.img3": "Electric motor",
+          "power.sub": "High-voltage & low-voltage power solutions",
+          "power.desc": "High-performance electrical materials engineered to meet strict international safety standards, ensuring uninterrupted power flow and system protection.",
+          "power.img1": "Armoured power cables",
+          "power.img2": "Distribution transformer",
+          "power.img3": "Low-voltage breakers, meters, sockets and wire",
+          "ppe.alt": "PPE kit: helmet, boots, ear muffs, gloves and safety cones",
+          "ppe.desc": "Personal protective equipment and workplace safety supplies to protect personnel on site.",
+          "sec.alt": "Dome CCTV security camera",
+          "sec.desc": "Advanced electronic security systems designed to meet international standards, providing real-time monitoring, data protection and enhanced security for residential, commercial and industrial environments.",
+          "net.alt": "Network switch with blue patch cables",
+          "net.desc": "Reliable network infrastructure designed to meet international standards, ensuring seamless connectivity for residential, commercial and industrial environments.",
+          "hse.eyebrow": "Quality Assurance & Safety",
+          "hse.title": "HSE Compliance (Health, Safety & Environment)",
+          "hse.text": "We are committed to advancing health, safety and environmental excellence by supplying compliant products and innovative solutions that protect personnel, assets and the environment. Our approach supports risk mitigation, regulatory compliance, accident prevention, environmental conservation and the adoption of industry best practices, ensuring safer workplaces and sustainable operations for industrial, commercial and infrastructure projects.",
+          "hse.p1": "Risk mitigation",
+          "hse.p2": "Regulatory compliance",
+          "hse.p3": "Accident prevention",
+          "hse.p4": "Environmental conservation",
+          "hse.p5": "Industry best practices",
+          "hse.p6": "Safer workplaces",
+          "hse.cert": "[Certifications — to be completed by Infinity Sources]",
+          "ph.label": "Placeholder",
+          "ph.address": "[Address — to be completed]",
+          "ph.hours": "[Business hours — to be completed]",
+          "ph.social": "[LinkedIn / Facebook / WhatsApp — to be completed]",
+          "contact.eyebrow": "Contact / Request a Quote",
+          "contact.title": "A strong partnership is vital to your business.",
+          "contact.phone": "Phone",
+          "contact.email": "Email",
+          "contact.web": "Website",
+          "contact.address": "Address",
+          "contact.hours": "Business hours",
+          "contact.social": "Social",
+          "form.title": "Request a Quote",
+          "form.name": "Name",
+          "form.company": "Company",
+          "form.email": "Email",
+          "form.phone": "Phone",
+          "form.cat": "Product category",
+          "form.choose": "Choose a category",
+          "opt.net": "Network Installation",
+          "opt.other": "Other",
+          "form.msg": "Message",
+          "form.msgPh": "Products, quantities, delivery location and timing",
+          "form.send": "Send request",
+          "form.note": "Your email app will open to send the request.",
+          "form.subject": "Quote request – ",
+          "form.errName": "Please enter your name.",
+          "form.errEmail": "Please enter a valid email address.",
+          "form.errPhone": "Please enter a valid phone number.",
+          "form.errCat": "Please choose a product category.",
+          "form.errMsg": "Please tell us what you need.",
+          "form.opening": "Opening your email app…",
+          "foot.rights": "All rights reserved.",
+          "foot.illus": "Images are illustrative of product categories."
+        },
+        pt: {
+          "meta.title": "INFINITY SOURCES, LDA · Fornecimento industrial e serviços técnicos em Moçambique",
+          "meta.desc": "Equipamentos industriais, consumíveis e serviços técnicos para a mineração, manufactura e construção pesada em todo Moçambique.",
+          "nav.lang": "Idioma",
+          "lang.now": "Idioma: Português",
+          "nav.logo": "INFINITY SOURCES, LDA, voltar ao topo",
+          "nav.main": "Principal",
+          "foot.links": "Ligações rápidas",
+          "nav.home": "Início",
+          "nav.about": "Sobre",
+          "nav.sectors": "Sectores",
+          "nav.products": "Produtos e Serviços",
+          "nav.hse": "HSE",
+          "nav.contact": "Contacto",
+          "nav.open": "Abrir menu",
+          "nav.close": "Fechar menu",
+          "cta.quote": "Pedir Orçamento",
+          "cta.this": "Pedir orçamento para esta categoria",
+          "hero.alt": "Uma mina a céu aberto ao fim da tarde",
+          "hero.eyebrow": "Fornecimento industrial · Moçambique",
+          "hero.tagline": "Ligando processos da origem ao cliente",
+          "hero.subline": "Facilitamos a circulação fluida de bens, informação e valor desde a origem até ao consumidor.",
+          "hero.sceneLabel": "Centro de fornecimento 3D interactivo: gerador, broca e engrenagem, bobina de cabo, transformador e poste, capacete de segurança, câmara de segurança e bastidor de rede",
+          "hero.hint": "Arraste para explorar",
+          "hero.3d": "3D",
+          "hero.on": "Ligado",
+          "hero.off": "Desligado",
+          "hero.3dLabel": "Cena 3D",
+          "hot.mining": "Consumíveis de Mineração",
+          "hot.gen": "Geradores e Motores",
+          "hot.power": "Material Eléctrico",
+          "hot.ppe": "EPI e Segurança",
+          "hot.sec": "Segurança Electrónica",
+          "hot.net": "Instalação de Redes",
+          "hero.short": "Equipamentos industriais, consumíveis e serviços técnicos para a mineração, manufactura e construção pesada em todo Moçambique.",
+          "hero.products": "Os Nossos Produtos e Serviços",
+          "about.eyebrow": "Sobre nós",
+          "about.title": "Uma empresa profissional de fornecimento e serviços industriais",
+          "about.p1": "A INFINITY SOURCES, LDA é uma empresa profissional de fornecimento e serviços industriais. Especializamo-nos no fornecimento de materiais eléctricos de alta qualidade, geradores, motores eléctricos, consumíveis de mineração e peças sobressalentes para máquinas.",
+          "about.identity": "Identidade corporativa",
+          "about.p2": "Somos um parceiro de fornecimento industrial dinâmico e em crescimento, ao serviço da mineração, manufactura e construção pesada. Fundada no princípio da fiabilidade, a INFINITY SOURCES, LDA opera em todo Moçambique, fornecendo equipamentos e serviços de engenharia de classe mundial.",
+          "about.missionT": "A Nossa Missão",
+          "about.mission": "Fornecer equipamentos industriais e apoio técnico de excelência que impulsionam o progresso e minimizam o tempo de paragem.",
+          "about.visionT": "A Nossa Visão",
+          "about.vision": "Ser o parceiro preferencial da indústria pesada na África Austral.",
+          "about.commitT": "O Nosso Compromisso",
+          "about.commit": "Um portefólio de produtos abrangente, um serviço dedicado e um compromisso com a excelência industrial.",
+          "about.why": "Porque é importante",
+          "about.effT": "Eficiência",
+          "about.eff": "Aprovisionamento e fornecimento fiáveis que mantêm as suas operações em andamento.",
+          "about.effAlt": "Caixas de fornecimento empilhadas num armazém",
+          "about.costT": "Reduzir Custos",
+          "about.cost": "Aprovisionamento dos materiais certos para ajudar a controlar os custos operacionais.",
+          "about.costAlt": "Uma calculadora pousada sobre uma factura",
+          "sectors.eyebrow": "Sectores que servimos",
+          "sectors.title": "Fornecimento para as indústrias que fazem Moçambique avançar",
+          "sectors.miningT": "Mineração",
+          "sectors.mining": "Consumíveis de mineração, peças sobressalentes para máquinas, material eléctrico e de segurança para minas.",
+          "sectors.manuT": "Manufactura",
+          "sectors.manu": "Materiais eléctricos, motores e consumíveis industriais para linhas de produção.",
+          "sectors.consT": "Construção Pesada",
+          "sectors.cons": "Geradores, material eléctrico e EPI para estaleiros de construção e obras de infra-estruturas.",
+          "sectors.bandAlt": "Estantes de armazém abastecidas com materiais",
+          "sectors.coreT": "As nossas principais áreas de fornecimento",
+          "core.1": "Consumíveis de Mineração",
+          "core.2": "Geradores e Motores Eléctricos",
+          "core.3": "Material Eléctrico",
+          "core.4": "EPI e Segurança",
+          "core.5": "Sistemas de Segurança Electrónica",
+          "prod.eyebrow": "Produtos e Serviços",
+          "prod.title": "Equipamentos, consumíveis e instalações de um único fornecedor",
+          "prod.sub": "Seis categorias. Escolha uma e peça um orçamento.",
+          "cat.mining": "Materiais e Consumíveis de Mineração",
+          "cat.gen": "Geradores e Motores Eléctricos",
+          "cat.power": "Material Eléctrico",
+          "cat.ppe": "EPI e Segurança",
+          "cat.sec": "Sistemas de Segurança Electrónica",
+          "cat.net": "Instalação de Redes e Infra-estruturas de Conectividade",
+          "mining.drillT": "Perfuração e Escavação",
+          "mining.drill": "Varas de perfuração, brocas de botões, adaptadores de encabadouro e ferramentas de corte.",
+          "mining.slurryT": "Manuseamento de Polpas e Fluidos",
+          "mining.slurry": "Mangueiras para polpa resistentes ao desgaste, válvulas de alta pressão e bombas.",
+          "mining.ventT": "Sistemas de Ventilação",
+          "mining.vent": "Condutas flexíveis, ventiladores de alta capacidade e purificação de ar.",
+          "mining.consT": "Consumíveis Industriais",
+          "mining.cons": "Abrasivos e corpos moentes, fixadores de alta resistência e lubrificantes.",
+          "mining.img1": "Britador de maxilas móvel",
+          "mining.img2": "Britadores de martelos e de impacto",
+          "mining.img3": "Lençol de borracha e mangueira",
+          "mining.img4": "Roletes de transportador",
+          "gen.desc": "Fornecimento de geradores e motores eléctricos para operações industriais.",
+          "gen.img1": "Gerador móvel",
+          "gen.img2": "Grupo gerador a diesel insonorizado",
+          "gen.img3": "Motor eléctrico",
+          "power.sub": "Soluções de energia de alta e baixa tensão",
+          "power.desc": "Materiais eléctricos de alto desempenho, concebidos para cumprir rigorosas normas internacionais de segurança, garantindo um fluxo de energia ininterrupto e a protecção dos sistemas.",
+          "power.img1": "Cabos de energia armados",
+          "power.img2": "Transformador de distribuição",
+          "power.img3": "Disjuntores, contadores, tomadas e fio de baixa tensão",
+          "ppe.alt": "Kit de EPI: capacete, botas, protectores auriculares, luvas e cones de sinalização",
+          "ppe.desc": "Equipamento de protecção individual e materiais de segurança no trabalho para proteger o pessoal no local.",
+          "sec.alt": "Câmara de videovigilância (CCTV) tipo dome",
+          "sec.desc": "Sistemas avançados de segurança electrónica, concebidos para cumprir normas internacionais, proporcionando monitorização em tempo real, protecção de dados e maior segurança para ambientes residenciais, comerciais e industriais.",
+          "net.alt": "Comutador de rede com cabos de ligação azuis",
+          "net.desc": "Infra-estruturas de rede fiáveis, concebidas para cumprir normas internacionais, garantindo uma conectividade contínua para ambientes residenciais, comerciais e industriais.",
+          "hse.eyebrow": "Garantia de Qualidade e Segurança",
+          "hse.title": "Conformidade HSE (Saúde, Segurança e Ambiente)",
+          "hse.text": "Estamos empenhados em promover a excelência em saúde, segurança e ambiente, fornecendo produtos em conformidade e soluções inovadoras que protegem o pessoal, os activos e o ambiente. A nossa abordagem apoia a mitigação de riscos, a conformidade regulamentar, a prevenção de acidentes, a conservação ambiental e a adopção das melhores práticas do sector, garantindo locais de trabalho mais seguros e operações sustentáveis para projectos industriais, comerciais e de infra-estruturas.",
+          "hse.p1": "Mitigação de riscos",
+          "hse.p2": "Conformidade regulamentar",
+          "hse.p3": "Prevenção de acidentes",
+          "hse.p4": "Conservação ambiental",
+          "hse.p5": "Melhores práticas do sector",
+          "hse.p6": "Locais de trabalho mais seguros",
+          "hse.cert": "[Certificações — a preencher pela Infinity Sources]",
+          "ph.label": "Por preencher",
+          "ph.address": "[Morada — a preencher pela empresa]",
+          "ph.hours": "[Horário de funcionamento — a preencher pela empresa]",
+          "ph.social": "[LinkedIn / Facebook / WhatsApp — a preencher pela empresa]",
+          "contact.eyebrow": "Contacto / Pedir Orçamento",
+          "contact.title": "Uma parceria sólida é vital para o seu negócio.",
+          "contact.phone": "Telefone",
+          "contact.email": "E-mail",
+          "contact.web": "Website",
+          "contact.address": "Morada",
+          "contact.hours": "Horário de funcionamento",
+          "contact.social": "Redes sociais",
+          "form.title": "Pedir Orçamento",
+          "form.name": "Nome",
+          "form.company": "Empresa",
+          "form.email": "E-mail",
+          "form.phone": "Telefone",
+          "form.cat": "Categoria de produto",
+          "form.choose": "Escolha uma categoria",
+          "opt.net": "Instalação de Redes",
+          "opt.other": "Outro",
+          "form.msg": "Mensagem",
+          "form.msgPh": "Produtos, quantidades, local e prazo de entrega",
+          "form.send": "Enviar pedido",
+          "form.note": "A sua aplicação de e-mail abrirá para enviar o pedido.",
+          "form.subject": "Pedido de orçamento – ",
+          "form.errName": "Indique o seu nome.",
+          "form.errEmail": "Indique um endereço de e-mail válido.",
+          "form.errPhone": "Indique um número de telefone válido.",
+          "form.errCat": "Escolha uma categoria de produto.",
+          "form.errMsg": "Diga-nos o que necessita.",
+          "form.opening": "A abrir a sua aplicação de e-mail…",
+          "foot.rights": "Todos os direitos reservados.",
+          "foot.illus": "As imagens são ilustrativas das categorias de produtos."
+        }
+      };
+
+      (function () {
+        /* Language: ?lang= override, then this session's choice, then the browser language */
+        const KEY = "is-lang";
+        let memLang = null; /* fallback when storage is unavailable */
+        const valid = (v) => (v === "pt" || v === "en" ? v : null);
+        function readStored() {
+          try { const v = valid(sessionStorage.getItem(KEY)); if (v) return v; } catch (e) {}
+          try { const v = valid(localStorage.getItem(KEY)); if (v) return v; } catch (e) {}
+          return memLang;
+        }
+        function store(v) {
+          memLang = v;
+          try { sessionStorage.setItem(KEY, v); } catch (e) {}
+          try { localStorage.setItem(KEY, v); } catch (e) {}
+        }
+        let urlLang = null;
+        try { urlLang = valid((new URLSearchParams(window.location.search).get("lang") || "").toLowerCase().slice(0, 2)); } catch (e) {}
+        const navLang = /^pt/i.test(navigator.language || "") ? "pt" : "en";
+        let lang = urlLang || readStored() || navLang;
+
+        const t = (k) => (i18n[lang] && i18n[lang][k]) || i18n.en[k] || "";
+        const $$ = (s, r) => Array.from((r || document).querySelectorAll(s));
+
+        function applyLang() {
+          document.documentElement.lang = lang;
+          document.title = t("meta.title");
+          const desc = document.getElementById("meta-desc");
+          if (desc) desc.setAttribute("content", t("meta.desc"));
+          $$("[data-i18n]").forEach((el) => { const v = t(el.dataset.i18n); if (v) el.textContent = v; });
+          $$("[data-i18n-alt]").forEach((el) => { el.alt = t(el.dataset.i18nAlt); });
+          $$("[data-i18n-placeholder]").forEach((el) => { el.placeholder = t(el.dataset.i18nPlaceholder); });
+          $$("[data-i18n-aria]").forEach((el) => { el.setAttribute("aria-label", t(el.dataset.i18nAria)); });
+          $$(".x-lang [data-lang]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.lang === lang)));
+          const bg = document.querySelector(".x-burger");
+          if (bg) bg.setAttribute("aria-label", t(bg.getAttribute("aria-expanded") === "true" ? "nav.close" : "nav.open"));
+          document.dispatchEvent(new CustomEvent("langchange", { detail: { lang } }));
+        }
+        function confirmLang(btn) {
+          const live = document.getElementById("lang-live");
+          if (live) live.textContent = t("lang.now");
+          if (btn) {
+            btn.classList.remove("is-confirm");
+            void btn.offsetWidth;
+            btn.classList.add("is-confirm");
+            setTimeout(() => btn.classList.remove("is-confirm"), 450);
+          }
+        }
+        function setLang(v, btn) {
+          v = valid(v);
+          if (!v) return;
+          if (v === lang) { confirmLang(btn); return; }
+          lang = v;
+          store(v);
+          try {
+            const u = new URL(window.location.href);
+            if (u.searchParams.has("lang")) { u.searchParams.set("lang", v); history.replaceState(history.state, "", u); }
+          } catch (e) {}
+          applyLang();
+          confirmLang(btn);
+        }
+        $$(".x-lang [data-lang]").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang, b)));
+        applyLang();
+
+        const year = document.getElementById("year");
+        if (year) year.textContent = new Date().getFullYear();
+
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        /* Mobile menu */
+        const burger = document.querySelector(".x-burger");
+        const menu = document.getElementById("site-menu");
+        function setMenu(open) {
+          menu.classList.toggle("is-open", open);
+          burger.setAttribute("aria-expanded", String(open));
+          burger.setAttribute("aria-label", t(open ? "nav.close" : "nav.open"));
+        }
+        burger.addEventListener("click", () => setMenu(!menu.classList.contains("is-open")));
+        menu.addEventListener("click", (e) => { if (e.target.closest("a")) setMenu(false); });
+        /* the language buttons stay inside the menu, so it stays open on switch */
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && menu.classList.contains("is-open")) { setMenu(false); burger.focus(); }
+        });
+        document.addEventListener("click", (e) => {
+          if (menu.classList.contains("is-open") && !e.target.closest("#site-header")) setMenu(false);
+        });
+
+        /* Active nav link */
+        const links = $$(".x-menu a[href^='#']:not(.x-btn)");
+        const targets = links.map((a) => document.getElementById(a.getAttribute("href").slice(1)));
+        let ticking = false;
+        function sync() {
+          const line = window.innerHeight * 0.3;
+          let cur = 0;
+          targets.forEach((s, i) => { if (s && s.getBoundingClientRect().top <= line) cur = i; });
+          links.forEach((a, i) => (i === cur ? a.setAttribute("aria-current", "true") : a.removeAttribute("aria-current")));
+        }
+
+        /* Gentle hero parallax */
+        const heroImg = document.querySelector(".x-hero .hero__img");
+        function parallax() {
+          if (reduce || !heroImg) return;
+          const y = Math.min(window.scrollY, 900);
+          heroImg.style.translate = "0 " + (y * 0.18).toFixed(1) + "px";
+        }
+        window.addEventListener("scroll", () => {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(() => { sync(); parallax(); ticking = false; });
+        }, { passive: true });
+        sync();
+
+        /* Light perspective tilt on hover, for fine pointers only */
+        if (!reduce && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+          $$(".x-tilt").forEach((el) => {
+            const max = parseFloat(el.dataset.tilt) || 6;
+            el.addEventListener("pointermove", (e) => {
+              if (e.target.closest(".x-tilt") !== el && el.contains(e.target.closest(".x-tilt"))) return;
+              const r = el.getBoundingClientRect();
+              const x = (e.clientX - r.left) / r.width - 0.5;
+              const y = (e.clientY - r.top) / r.height - 0.5;
+              el.style.setProperty("--ry", (x * max).toFixed(2) + "deg");
+              el.style.setProperty("--rx", (-y * max).toFixed(2) + "deg");
+              el.style.setProperty("--mx", ((x + 0.5) * 100).toFixed(1) + "%");
+              el.style.setProperty("--my", ((y + 0.5) * 100).toFixed(1) + "%");
+            });
+            el.addEventListener("pointerleave", () => { el.style.removeProperty("--rx"); el.style.removeProperty("--ry"); });
+          });
+        }
+
+        /* Scroll reveal: sections fade and rise into place */
+        if (!reduce && "IntersectionObserver" in window) {
+          document.documentElement.classList.add("js-motion");
+          const groups = [
+            ".section > .head", ".section > .prose", ".section > .pair > *", ".cards > *", ".x-tiles > *",
+            ".x-band", ".x-cats > .x-cat", ".x-prods > .x-cat", ".x-pillars > li", ".section > .aside", ".section > .x-h3"
+          ];
+          const io = new IntersectionObserver((entries) => {
+            entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); } });
+          }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+          $$(groups.join(",")).forEach((el) => {
+            const sibs = Array.from(el.parentElement.children);
+            const i = sibs.indexOf(el);
+            const stagger = el.parentElement.classList.contains("section") ? 0 : Math.min(i, 6) * 80;
+            el.style.setProperty("--d", stagger + "ms");
+            el.classList.add("x-reveal");
+            io.observe(el);
+          });
+        }
+
+        /* Category switcher: highlight the category in view, keep its chip visible */
+        const catLinks = $$(".x-catnav a");
+        const catnav = document.querySelector(".x-catnav");
+        if (catLinks.length) {
+          const cats = catLinks.map((a) => document.getElementById(a.getAttribute("href").slice(1)));
+          const setActive = (a) => {
+            catLinks.forEach((l) => (l === a ? l.setAttribute("aria-current", "true") : l.removeAttribute("aria-current")));
+            if (a && catnav.scrollWidth > catnav.clientWidth) {
+              const li = a.parentElement;
+              const left = li.offsetLeft - (catnav.clientWidth - li.offsetWidth) / 2;
+              catnav.scrollTo({ left: Math.max(0, left), behavior: reduce ? "auto" : "smooth" });
+            }
+          };
+          let catTick = false, current = null, picked = -1;
+          window.pickCategory = (id) => {
+            picked = cats.findIndex((c) => c && c.id === id);
+            requestAnimationFrame(catSync);
+          };
+          catLinks.forEach((a, i) => a.addEventListener("click", () => window.pickCategory(cats[i].id)));
+          const catSync = () => {
+            catTick = false;
+            const line = Math.min(window.innerHeight * 0.45, 320);
+            let idx = -1, maxTop = -Infinity;
+            const tops = cats.map((c) => (c ? c.getBoundingClientRect().top : Infinity));
+            tops.forEach((t) => { if (t <= line && t > maxTop) maxTop = t; });
+            const row = [];
+            tops.forEach((t, i) => { if (t <= line && Math.abs(t - maxTop) < 4) row.push(i); });
+            if (row.length) idx = row.includes(picked) ? picked : row[0];
+            const last = cats[cats.length - 1];
+            if (last && last.getBoundingClientRect().bottom < 120) idx = -1;
+            const a = idx >= 0 ? catLinks[idx] : null;
+            if (a !== current) { current = a; setActive(a); }
+          };
+          window.addEventListener("scroll", () => { if (!catTick) { catTick = true; requestAnimationFrame(catSync); } }, { passive: true });
+          catSync();
+        }
+
+        /* Quote links pre-select the category */
+        const form = document.getElementById("quote-form");
+        const sel = document.getElementById("f-cat");
+        $$("[data-cat]").forEach((a) => a.addEventListener("click", () => {
+          sel.value = a.dataset.cat;
+          setErr(sel, "e-cat", "");
+          setTimeout(() => document.getElementById("f-name").focus({ preventScroll: true }), reduce ? 0 : 600);
+        }));
+
+        /* Validate, then open a pre-filled email */
+        /* Messages carry their i18n key, so a language switch re-translates them */
+        function setMsg(el, key) {
+          if (key) { el.dataset.i18n = key; el.textContent = t(key); }
+          else { delete el.dataset.i18n; el.textContent = ""; }
+        }
+        function setErr(field, id, key) {
+          setMsg(document.getElementById(id), key);
+          if (key) field.setAttribute("aria-invalid", "true"); else field.removeAttribute("aria-invalid");
+          return !key;
+        }
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const f = form.elements;
+          const name = f.name.value.trim(), email = f.email.value.trim(), phone = f.phone.value.trim();
+          const company = f.company.value.trim(), message = f.message.value.trim();
+          const checks = [
+            setErr(f.name, "e-name", name ? "" : "form.errName"),
+            setErr(f.email, "e-email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) ? "" : "form.errEmail"),
+            setErr(f.phone, "e-phone", !phone || /^[+()\d\s.-]{7,}$/.test(phone) ? "" : "form.errPhone"),
+            setErr(sel, "e-cat", sel.value ? "" : "form.errCat"),
+            setErr(f.message, "e-msg", message ? "" : "form.errMsg")
+          ];
+          const status = document.getElementById("form-status");
+          if (checks.includes(false)) {
+            setMsg(status, "");
+            const first = form.querySelector("[aria-invalid='true']");
+            if (first) first.focus();
+            return;
+          }
+          const category = sel.options[sel.selectedIndex].text;
+          const body = [
+            t("form.name") + ": " + name,
+            t("form.company") + ": " + (company || "-"),
+            t("form.email") + ": " + email,
+            t("form.phone") + ": " + (phone || "-"),
+            t("form.cat") + ": " + category,
+            "",
+            t("form.msg") + ":",
+            message
+          ].join("\n");
+          setMsg(status, "form.opening");
+          window.location.href = "mailto:infinitysourceslda@gmail.com?subject=" +
+            encodeURIComponent(t("form.subject") + category) + "&body=" + encodeURIComponent(body);
+        });
+      })();
+    </script>
+    <script>
+      /* Interactive 3D hero. three.js loads only when the device and connection can carry it. */
+      (function () {
+        const hero = document.getElementById("home");
+        const stage = document.getElementById("hero-stage");
+        const spots = Array.from(document.querySelectorAll("#hero-spots .x-spot"));
+        const toggle = document.getElementById("hero-3d");
+        const stateEl = document.getElementById("hero-3d-state");
+        const hint = document.getElementById("hero-hint");
+        if (!hero || !stage || !toggle) return;
+        const tr = (k) => (i18n[document.documentElement.lang] || i18n.en)[k] || i18n.en[k] || "";
+        const THREE_URL = "https://unpkg.com/three@0.160.0/build/three.module.js";
+        const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function hasWebGL() {
+          try {
+            const c = document.createElement("canvas");
+            const gl = window.WebGLRenderingContext && (c.getContext("webgl2") || c.getContext("webgl"));
+            if (gl) { const ext = gl.getExtension("WEBGL_lose_context"); if (ext) ext.loseContext(); }
+            return !!gl;
+          } catch (e) { return false; }
+        }
+        function lightweight() {
+          const c = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
+          if (reduce || c.saveData) return true;
+          if (/^(slow-2g|2g|3g)$/.test(c.effectiveType || "")) return true;
+          if (navigator.deviceMemory && navigator.deviceMemory <= 2) return true;
+          return false;
+        }
+
+        if (!hasWebGL()) return; /* photo with ken burns stays; no toggle */
+        toggle.hidden = false;
+
+        let pref = null;
+        try { pref = localStorage.getItem("is-hero-3d"); } catch (e) {}
+        let want = pref ? pref === "on" : !lightweight();
+        let app = null, loading = false;
+
+        function setUI(on) {
+          toggle.setAttribute("aria-pressed", String(on));
+          stateEl.textContent = tr(on ? "hero.on" : "hero.off");
+        }
+        setUI(want);
+        document.addEventListener("langchange", () => setUI(want));
+
+        toggle.addEventListener("click", () => {
+          want = !want;
+          setUI(want);
+          try { localStorage.setItem("is-hero-3d", want ? "on" : "off"); } catch (e) {}
+          if (want) boot();
+          else { hero.classList.remove("is-3d"); if (app) app.setEnabled(false); }
+        });
+
+        async function boot() {
+          if (app) { app.setEnabled(true); hero.classList.add("is-3d"); return; }
+          if (loading) return;
+          loading = true;
+          try {
+            const THREE = await import(THREE_URL);
+            app = build(THREE);
+            loading = false;
+            if (!want) return;
+            app.setEnabled(true);
+            requestAnimationFrame(() => requestAnimationFrame(() => hero.classList.add("is-3d")));
+          } catch (err) {
+            loading = false;
+            want = false;
+            setUI(false);
+            hero.classList.remove("is-3d");
+          }
+        }
+
+        /* Start after first paint, when the browser is idle */
+        if (want) {
+          requestAnimationFrame(() => setTimeout(() => {
+            if ("requestIdleCallback" in window) requestIdleCallback(boot, { timeout: 1200 });
+            else boot();
+          }, 60));
+        }
+
+        function build(THREE) {
+          const INK = 0x231d1b, YELLOW = 0xffe53b;
+          const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: "high-performance" });
+          renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+          renderer.setClearColor(INK, 1);
+          renderer.shadowMap.enabled = true;
+          renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+          renderer.domElement.setAttribute("aria-hidden", "true");
+          stage.appendChild(renderer.domElement);
+
+          const scene = new THREE.Scene();
+          scene.fog = new THREE.Fog(INK, 14, 32);
+          const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 120);
+
+          /* A tiny procedural studio for metal reflections */
+          const env = new THREE.Scene();
+          env.add(new THREE.Mesh(new THREE.BoxGeometry(30, 30, 30), new THREE.MeshBasicMaterial({ color: 0x1f1917, side: THREE.BackSide })));
+          const softbox = (hex, s, w, h, x, y, z) => {
+            const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: new THREE.Color(hex).multiplyScalar(s), side: THREE.DoubleSide }));
+            m.position.set(x, y, z); m.lookAt(0, 0, 0); env.add(m);
+          };
+          softbox(0xfff3dc, 3.2, 12, 5, 0, 12, 4);
+          softbox(YELLOW, 2.4, 6, 10, -12, 3, -6);
+          softbox(0xffd9a0, 1.6, 6, 8, 12, 2, 2);
+          const pmrem = new THREE.PMREMGenerator(renderer);
+          scene.environment = pmrem.fromScene(env, 0.04).texture;
+          pmrem.dispose();
+
+          scene.add(new THREE.HemisphereLight(0xfff4e0, 0x1a1412, 0.6));
+          const key = new THREE.DirectionalLight(0xfff0d6, 2.4);
+          key.position.set(5, 10, 7);
+          key.castShadow = true;
+          key.shadow.mapSize.set(1024, 1024);
+          Object.assign(key.shadow.camera, { left: -6, right: 6, top: 6, bottom: -6, near: 1, far: 30 });
+          key.shadow.bias = -0.0006;
+          key.shadow.normalBias = 0.02;
+          scene.add(key);
+          const rim = new THREE.DirectionalLight(0xffd23b, 3);
+          rim.position.set(-8, 5, -7);
+          scene.add(rim);
+          const rim2 = new THREE.DirectionalLight(0xffb45a, 1.4);
+          rim2.position.set(8, 3, -6);
+          scene.add(rim2);
+          const coreLight = new THREE.PointLight(YELLOW, 7, 8, 2);
+          coreLight.position.set(0, 0.9, 0);
+          scene.add(coreLight);
+
+          const M = (o) => new THREE.MeshStandardMaterial(Object.assign({ envMapIntensity: 0.7 }, o));
+          const mat = {
+            steel: M({ color: 0x6b605a, metalness: 0.8, roughness: 0.32 }),
+            dark: M({ color: 0x2f2724, metalness: 0.6, roughness: 0.48 }),
+            black: M({ color: 0x141010, metalness: 0.3, roughness: 0.7 }),
+            yellow: M({ color: YELLOW, metalness: 0.2, roughness: 0.36 }),
+            glow: new THREE.MeshBasicMaterial({ color: YELLOW }),
+            chrome: M({ color: 0xcfc6be, metalness: 1, roughness: 0.18 }),
+            ceramic: M({ color: 0xe2dacd, metalness: 0.05, roughness: 0.28 }),
+            copper: M({ color: 0xc27a45, metalness: 0.9, roughness: 0.3 }),
+            wood: M({ color: 0x5b4535, metalness: 0.1, roughness: 0.8 }),
+            core: M({ color: 0x2a2320, emissive: YELLOW, emissiveIntensity: 0.6, metalness: 0.4, roughness: 0.4 })
+          };
+          const G = THREE;
+          const add = (parent, geo, material, x, y, z, shadow) => {
+            const m = new G.Mesh(geo, material);
+            m.position.set(x || 0, y || 0, z || 0);
+            if (shadow !== false) { m.castShadow = true; m.receiveShadow = true; }
+            parent.add(m);
+            return m;
+          };
+          const UP = new G.Vector3(0, 1, 0);
+          const beam = (parent, a, b, r, material) => {
+            const d = new G.Vector3().subVectors(b, a);
+            const m = new G.Mesh(new G.CylinderGeometry(r, r, d.length(), 6), material);
+            m.position.copy(a).addScaledVector(d, 0.5);
+            m.quaternion.setFromUnitVectors(UP, d.clone().normalize());
+            m.castShadow = true;
+            parent.add(m);
+            return m;
+          };
+          const tube = (parent, pts, r, material) => {
+            const curve = new G.CatmullRomCurve3(pts.map((p) => new G.Vector3(p[0], p[1], p[2])));
+            const m = new G.Mesh(new G.TubeGeometry(curve, 48, r, 8, false), material);
+            m.castShadow = true;
+            parent.add(m);
+            return m;
+          };
+          const anchor = (parent, x, y, z) => { const o = new G.Object3D(); o.position.set(x, y, z); parent.add(o); return o; };
+
+          /* Floor and rotating platform */
+          const floor = add(scene, new G.CircleGeometry(30, 64), M({ color: 0x1e1816, metalness: 0.2, roughness: 0.92 }), 0, 0, 0);
+          floor.rotation.x = -Math.PI / 2;
+          floor.castShadow = false;
+          [5.4, 6.8, 8.6].forEach((r, i) => {
+            const ring = new G.Mesh(new G.RingGeometry(r, r + 0.018, 160), new G.MeshBasicMaterial({ color: YELLOW, transparent: true, opacity: 0.16 - i * 0.04 }));
+            ring.rotation.x = -Math.PI / 2;
+            ring.position.y = 0.005;
+            scene.add(ring);
+          });
+
+          const platform = new G.Group();
+          scene.add(platform);
+          add(platform, new G.CylinderGeometry(4.3, 4.55, 0.35, 72), mat.dark, 0, 0.175, 0);
+          add(platform, new G.CylinderGeometry(4.12, 4.12, 0.06, 72), mat.steel, 0, 0.38, 0);
+          const edge = new G.Mesh(new G.TorusGeometry(4.32, 0.035, 8, 160), mat.glow);
+          edge.rotation.x = Math.PI / 2;
+          edge.position.y = 0.355;
+          platform.add(edge);
+          for (let i = 0; i < 36; i++) {
+            const a = (i / 36) * Math.PI * 2;
+            const s = add(platform, new G.BoxGeometry(0.34, 0.012, 0.1), mat.yellow, Math.cos(a) * 3.9, 0.416, Math.sin(a) * 3.9, false);
+            s.rotation.y = -a + Math.PI / 2;
+            s.receiveShadow = true;
+          }
+          const Y0 = 0.41;
+
+          /* Hub core with a security mast */
+          add(platform, new G.CylinderGeometry(0.8, 0.95, 0.3, 6), mat.dark, 0, Y0 + 0.15, 0);
+          add(platform, new G.CylinderGeometry(0.66, 0.66, 0.03, 6), mat.core, 0, Y0 + 0.315, 0, false);
+          add(platform, new G.CylinderGeometry(0.06, 0.09, 2.6, 12), mat.steel, 0, Y0 + 1.6, 0);
+          const camRig = new G.Group();
+          camRig.position.set(0, Y0 + 2.86, 0);
+          platform.add(camRig);
+          add(camRig, new G.BoxGeometry(0.42, 0.05, 0.05), mat.steel, 0.2, 0, 0);
+          const camBody = new G.Group();
+          camBody.position.set(0.44, -0.1, 0);
+          camRig.add(camBody);
+          add(camBody, new G.BoxGeometry(0.46, 0.17, 0.19), mat.ceramic, 0, 0, 0);
+          add(camBody, new G.BoxGeometry(0.52, 0.03, 0.25), mat.dark, 0.02, 0.1, 0);
+          const lens = add(camBody, new G.CylinderGeometry(0.065, 0.065, 0.05, 20), mat.black, 0.25, 0, 0);
+          lens.rotation.z = Math.PI / 2;
+          const lensGlow = add(camBody, new G.SphereGeometry(0.03, 12, 8), mat.glow, 0.275, 0, 0, false);
+          const dome = add(camRig, new G.SphereGeometry(0.13, 24, 12, 0, Math.PI * 2, Math.PI / 2, Math.PI / 2), mat.black, -0.2, -0.02, 0);
+          dome.material = M({ color: 0x0f0c0b, metalness: 0.5, roughness: 0.1 });
+          const beacon = add(platform, new G.SphereGeometry(0.06, 16, 10), mat.glow.clone(), 0, Y0 + 2.95, 0, false);
+          const aSec = anchor(camBody, 0, 0.2, 0);
+
+          /* Generator set */
+          const gen = new G.Group();
+          gen.position.set(1.95, Y0, 1.05);
+          gen.rotation.y = -0.45;
+          platform.add(gen);
+          add(gen, new G.BoxGeometry(2.1, 0.16, 1.1), mat.dark, 0, 0.08, 0);
+          add(gen, new G.BoxGeometry(1.9, 1.0, 0.95), mat.yellow, 0, 0.66, 0);
+          add(gen, new G.BoxGeometry(1.96, 0.06, 1.0), mat.dark, 0, 1.19, 0);
+          for (let i = 0; i < 6; i++) {
+            add(gen, new G.BoxGeometry(0.05, 0.56, 0.02), mat.dark, -0.82 + i * 0.12, 0.66, 0.485, false);
+            add(gen, new G.BoxGeometry(0.05, 0.56, 0.02), mat.dark, -0.82 + i * 0.12, 0.66, -0.485, false);
+          }
+          add(gen, new G.BoxGeometry(0.5, 0.62, 0.02), mat.steel, 0.5, 0.64, 0.486, false);
+          add(gen, new G.BoxGeometry(0.22, 0.15, 0.02), mat.black, 0.5, 0.82, 0.5, false);
+          add(gen, new G.BoxGeometry(0.04, 0.04, 0.01), mat.glow, 0.44, 0.82, 0.512, false);
+          add(gen, new G.BoxGeometry(0.02, 0.76, 0.82), mat.dark, 0.96, 0.66, 0);
+          add(gen, new G.CylinderGeometry(0.07, 0.07, 0.45, 14), mat.steel, -0.62, 1.42, 0.15);
+          add(gen, new G.CylinderGeometry(0.095, 0.095, 0.05, 14), mat.dark, -0.62, 1.66, 0.15);
+          [-0.85, 0.85].forEach((x) => {
+            const eye = add(gen, new G.TorusGeometry(0.06, 0.016, 8, 16), mat.steel, x, 1.27, 0);
+            eye.rotation.y = Math.PI / 2;
+          });
+          const aGen = anchor(gen, 0.1, 1.45, 0);
+
+          /* Mining: spinning gear and drill bit */
+          const mine = new G.Group();
+          mine.position.set(-2.05, Y0, 1.15);
+          mine.rotation.y = 0.5;
+          platform.add(mine);
+          add(mine, new G.BoxGeometry(1.5, 0.12, 0.7), mat.dark, 0.3, 0.06, 0);
+          add(mine, new G.BoxGeometry(0.16, 1.05, 0.16), mat.steel, 0, 0.6, -0.24);
+          const axle = add(mine, new G.CylinderGeometry(0.06, 0.06, 0.42, 12), mat.chrome, 0, 1.16, -0.06);
+          axle.rotation.x = Math.PI / 2;
+          const gear = new G.Group();
+          gear.position.set(0, 1.16, 0.06);
+          mine.add(gear);
+          const disc = add(gear, new G.CylinderGeometry(0.6, 0.6, 0.16, 48), mat.steel, 0, 0, 0);
+          disc.rotation.x = Math.PI / 2;
+          const hub = add(gear, new G.CylinderGeometry(0.17, 0.17, 0.24, 24), mat.yellow, 0, 0, 0);
+          hub.rotation.x = Math.PI / 2;
+          const inner = add(gear, new G.TorusGeometry(0.4, 0.035, 8, 40), mat.dark, 0, 0, 0.08);
+          for (let i = 0; i < 18; i++) {
+            const a = (i / 18) * Math.PI * 2;
+            const tooth = add(gear, new G.BoxGeometry(0.15, 0.17, 0.16), mat.steel, Math.cos(a) * 0.66, Math.sin(a) * 0.66, 0);
+            tooth.rotation.z = a;
+          }
+          for (let i = 0; i < 5; i++) {
+            const a = (i / 5) * Math.PI * 2;
+            const hole = add(gear, new G.CylinderGeometry(0.07, 0.07, 0.17, 16), mat.black, Math.cos(a) * 0.28, Math.sin(a) * 0.28, 0, false);
+            hole.rotation.x = Math.PI / 2;
+          }
+          const bit = new G.Group();
+          bit.position.set(0.82, 0, 0.05);
+          mine.add(bit);
+          add(bit, new G.CylinderGeometry(0.2, 0.25, 0.12, 20), mat.dark, 0, 0.06, 0);
+          add(bit, new G.CylinderGeometry(0.06, 0.06, 1.2, 14), mat.steel, 0, 0.72, 0);
+          const helix = [];
+          for (let i = 0; i <= 40; i++) { const t = i / 40, a = t * Math.PI * 6; helix.push([Math.cos(a) * 0.085, 0.2 + t * 1.05, Math.sin(a) * 0.085]); }
+          tube(bit, helix, 0.022, mat.yellow);
+          add(bit, new G.CylinderGeometry(0.17, 0.12, 0.22, 20), mat.chrome, 0, 1.42, 0);
+          add(bit, new G.SphereGeometry(0.035, 10, 8), mat.chrome, 0, 1.54, 0);
+          for (let i = 0; i < 6; i++) {
+            const a = (i / 6) * Math.PI * 2;
+            add(bit, new G.SphereGeometry(0.035, 10, 8), mat.chrome, Math.cos(a) * 0.1, 1.53, Math.sin(a) * 0.1);
+          }
+          const aMine = anchor(mine, 0, 1.16, 0.2);
+
+          /* Power: lattice pylon, transformer and lines */
+          const pyl = new G.Group();
+          pyl.position.set(-1.05, Y0, -2.3);
+          platform.add(pyl);
+          const H = 4.0, B = 0.45, T = 0.12;
+          const half = (y) => B + (T - B) * (y / H);
+          const corners = (y) => { const h = half(y); return [[h, h], [-h, h], [-h, -h], [h, -h]].map((c) => new G.Vector3(c[0], y, c[1])); };
+          const base = corners(0), top = corners(H);
+          for (let i = 0; i < 4; i++) beam(pyl, base[i], top[i], 0.03, mat.steel);
+          const levels = 6;
+          for (let l = 0; l < levels; l++) {
+            const lo = corners((H * l) / levels), hi = corners((H * (l + 1)) / levels);
+            for (let f = 0; f < 4; f++) {
+              const n = (f + 1) % 4;
+              beam(pyl, hi[f], hi[n], 0.014, mat.steel);
+              beam(pyl, lo[f], hi[n], 0.01, mat.steel);
+              beam(pyl, lo[n], hi[f], 0.01, mat.steel);
+            }
+          }
+          add(pyl, new G.BoxGeometry(1.9, 0.06, 0.06), mat.steel, 0, 3.25, 0);
+          add(pyl, new G.BoxGeometry(1.4, 0.06, 0.06), mat.steel, 0, 3.75, 0);
+          add(pyl, new G.ConeGeometry(0.14, 0.35, 4), mat.steel, 0, H + 0.17, 0);
+          const insulator = (x, y) => {
+            for (let k = 0; k < 4; k++) add(pyl, new G.CylinderGeometry(0.06, 0.06, 0.025, 14), mat.ceramic, x, y - 0.06 - k * 0.055, 0);
+            return new G.Vector3(x, y - 0.3, 0);
+          };
+          const insA = insulator(0.9, 3.22), insB = insulator(-0.9, 3.22), insC = insulator(0.65, 3.72);
+
+          const trf = new G.Group();
+          trf.position.set(0.95, Y0, -2.3);
+          trf.rotation.y = -0.25;
+          platform.add(trf);
+          add(trf, new G.BoxGeometry(1.25, 0.1, 0.95), mat.steel, 0, 0.05, 0);
+          add(trf, new G.BoxGeometry(1.0, 0.9, 0.7), mat.dark, 0, 0.55, 0);
+          add(trf, new G.BoxGeometry(1.04, 0.05, 0.74), mat.steel, 0, 1.02, 0);
+          for (let i = 0; i < 7; i++) {
+            const z = -0.27 + i * 0.09;
+            add(trf, new G.BoxGeometry(0.16, 0.72, 0.025), mat.dark, 0.58, 0.52, z);
+            add(trf, new G.BoxGeometry(0.16, 0.72, 0.025), mat.dark, -0.58, 0.52, z);
+          }
+          add(trf, new G.BoxGeometry(0.32, 0.22, 0.01), mat.yellow, 0, 0.62, 0.356, false);
+          const bush = [];
+          [-0.3, 0, 0.3].forEach((x) => {
+            add(trf, new G.CylinderGeometry(0.05, 0.075, 0.4, 14), mat.ceramic, x, 1.25, 0.08);
+            [1.12, 1.22, 1.32].forEach((y) => add(trf, new G.CylinderGeometry(0.1, 0.1, 0.02, 16), mat.ceramic, x, y, 0.08, false));
+            add(trf, new G.CylinderGeometry(0.03, 0.03, 0.08, 10), mat.copper, x, 1.49, 0.08);
+            bush.push(anchor(trf, x, 1.52, 0.08));
+          });
+          const aPow = anchor(trf, 0, 1.7, 0);
+
+          /* Cable reel with a run of cable to the generator */
+          const reel = new G.Group();
+          reel.position.set(0.25, Y0, 2.55);
+          reel.rotation.y = 0.25;
+          platform.add(reel);
+          [-0.36, 0.36].forEach((x) => {
+            const f = add(reel, new G.CylinderGeometry(0.62, 0.62, 0.07, 36), mat.wood, x, 0.62, 0);
+            f.rotation.z = Math.PI / 2;
+          });
+          const coreC = add(reel, new G.CylinderGeometry(0.5, 0.5, 0.64, 36), mat.black, 0, 0.62, 0);
+          coreC.rotation.z = Math.PI / 2;
+          for (let i = 0; i < 6; i++) {
+            const ring = add(reel, new G.TorusGeometry(0.5, 0.028, 8, 36), mat.black, -0.27 + i * 0.108, 0.62, 0);
+            ring.rotation.y = Math.PI / 2;
+          }
+          const stripe = add(reel, new G.TorusGeometry(0.515, 0.012, 6, 48), mat.yellow, 0, 0.62, 0, false);
+          stripe.rotation.y = Math.PI / 2;
+          const shaft = add(reel, new G.CylinderGeometry(0.1, 0.1, 0.9, 16), mat.steel, 0, 0.62, 0);
+          shaft.rotation.z = Math.PI / 2;
+
+          /* PPE: helmet on a crate, with a safety cone */
+          const ppe = new G.Group();
+          ppe.position.set(2.6, Y0, -1.3);
+          ppe.rotation.y = -0.9;
+          platform.add(ppe);
+          add(ppe, new G.BoxGeometry(0.9, 0.6, 0.9), mat.wood, 0, 0.3, 0);
+          [0.12, 0.48].forEach((y) => add(ppe, new G.BoxGeometry(0.92, 0.06, 0.92), mat.dark, 0, y, 0, false));
+          const helmet = new G.Group();
+          helmet.position.set(0, 0.6, 0);
+          helmet.rotation.y = 0.6;
+          ppe.add(helmet);
+          const shellG = new G.Group();
+          shellG.scale.set(1, 0.86, 1.12);
+          helmet.add(shellG);
+          add(shellG, new G.SphereGeometry(0.42, 40, 20, 0, Math.PI * 2, 0, Math.PI / 2), mat.yellow, 0, 0, 0);
+          const ridge = add(shellG, new G.TorusGeometry(0.42, 0.035, 8, 28, Math.PI), mat.yellow, 0, 0, 0);
+          ridge.rotation.y = Math.PI / 2;
+          const brim = add(helmet, new G.CylinderGeometry(0.5, 0.53, 0.03, 40), mat.yellow, 0, 0.015, 0.07);
+          brim.scale.set(1, 1, 1.15);
+          const lamp = add(helmet, new G.CylinderGeometry(0.07, 0.07, 0.06, 18), mat.dark, 0, 0.2, 0.45);
+          lamp.rotation.x = Math.PI / 2 - 0.3;
+          const lampGlow = add(helmet, new G.CircleGeometry(0.05, 18), mat.glow, 0, 0.21, 0.485, false);
+          lampGlow.rotation.x = -0.3;
+          add(ppe, new G.BoxGeometry(0.42, 0.04, 0.42), mat.dark, 0.75, 0.02, 0.45);
+          add(ppe, new G.ConeGeometry(0.17, 0.6, 24), mat.yellow, 0.75, 0.33, 0.45);
+          add(ppe, new G.CylinderGeometry(0.108, 0.125, 0.09, 24), mat.black, 0.75, 0.3, 0.45, false);
+          const aPpe = anchor(ppe, 0, 1.15, 0);
+
+          /* Network cabinet with blinking ports and an antenna */
+          const net = new G.Group();
+          net.position.set(-2.75, Y0, -0.55);
+          net.rotation.y = 0.75;
+          platform.add(net);
+          add(net, new G.BoxGeometry(0.78, 1.65, 0.62), mat.dark, 0, 0.825, 0);
+          add(net, new G.BoxGeometry(0.64, 1.46, 0.02), M({ color: 0x0d0a09, metalness: 0.6, roughness: 0.12 }), 0, 0.84, 0.315, false);
+          const leds = [0, 1, 2].map(() => new G.MeshBasicMaterial({ color: YELLOW }));
+          for (let i = 0; i < 7; i++) {
+            const y = 0.28 + i * 0.18;
+            add(net, new G.BoxGeometry(0.58, 0.12, 0.03), mat.steel, 0, y, 0.33, false);
+            for (let j = 0; j < 3; j++) add(net, new G.BoxGeometry(0.03, 0.03, 0.012), leds[(i + j) % 3], 0.15 + j * 0.05, y, 0.35, false);
+          }
+          tube(net, [[-0.22, 1.18, 0.35], [-0.27, 1.02, 0.46], [-0.18, 0.86, 0.35]], 0.012, mat.yellow);
+          tube(net, [[-0.12, 0.82, 0.35], [-0.2, 0.64, 0.44], [-0.1, 0.46, 0.35]], 0.012, mat.yellow);
+          add(net, new G.CylinderGeometry(0.015, 0.015, 0.62, 8), mat.steel, 0.24, 1.96, 0);
+          const netTip = add(net, new G.SphereGeometry(0.04, 12, 8), mat.glow, 0.24, 2.28, 0, false);
+          const aNet = anchor(net, 0, 1.9, 0);
+
+          /* Cables: pylon to transformer, reel to generator */
+          scene.updateMatrixWorld(true);
+          const wp = (o) => o.getWorldPosition(new G.Vector3());
+          const pylonPt = (v) => pyl.localToWorld(v.clone());
+          const sag = (a, b, drop) => { const m = a.clone().lerp(b, 0.5); m.y -= drop; return [[a.x, a.y, a.z], [m.x, m.y, m.z], [b.x, b.y, b.z]]; };
+          const lineMat = M({ color: 0x0f0c0b, metalness: 0.5, roughness: 0.5 });
+          tube(platform, sag(pylonPt(insA), wp(bush[0]), 0.5), 0.012, lineMat);
+          tube(platform, sag(pylonPt(insC), wp(bush[1]), 0.6), 0.012, lineMat);
+          tube(platform, sag(pylonPt(insB), wp(bush[2]).add(new G.Vector3(0, 0, 0)), 0.9), 0.012, lineMat);
+          const rp = reel.localToWorld(new G.Vector3(0, 0.12, 0.5));
+          const gp = gen.localToWorld(new G.Vector3(-0.95, 0.4, 0.3));
+          tube(platform, [[rp.x, rp.y, rp.z], [rp.x + 0.4, Y0 + 0.04, rp.z - 0.3], [gp.x - 0.3, Y0 + 0.04, gp.z + 0.2], [gp.x, gp.y, gp.z]], 0.035, mat.black);
+
+          /* Glow at the core and drifting dust */
+          const dotTex = (() => {
+            const c = document.createElement("canvas");
+            c.width = c.height = 64;
+            const g = c.getContext("2d");
+            const grd = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+            grd.addColorStop(0, "rgba(255,255,255,1)");
+            grd.addColorStop(0.35, "rgba(255,255,255,0.5)");
+            grd.addColorStop(1, "rgba(255,255,255,0)");
+            g.fillStyle = grd;
+            g.fillRect(0, 0, 64, 64);
+            return new G.CanvasTexture(c);
+          })();
+          const halo = new G.Sprite(new G.SpriteMaterial({ map: dotTex, color: YELLOW, transparent: true, opacity: 0.35, depthWrite: false, blending: G.AdditiveBlending }));
+          halo.scale.set(3.4, 3.4, 1);
+          halo.position.set(0, Y0 + 0.5, 0);
+          platform.add(halo);
+
+          const N = 380;
+          const pos = new Float32Array(N * 3);
+          const spd = new Float32Array(N);
+          for (let i = 0; i < N; i++) {
+            const r = Math.sqrt(Math.random()) * 9, a = Math.random() * Math.PI * 2;
+            pos[i * 3] = Math.cos(a) * r;
+            pos[i * 3 + 1] = Math.random() * 6;
+            pos[i * 3 + 2] = Math.sin(a) * r;
+            spd[i] = 0.05 + Math.random() * 0.18;
+          }
+          const dustGeo = new G.BufferGeometry();
+          dustGeo.setAttribute("position", new G.BufferAttribute(pos, 3));
+          const dust = new G.Points(dustGeo, new G.PointsMaterial({ size: 0.075, map: dotTex, color: 0xffeaa6, transparent: true, opacity: 0.65, depthWrite: false, blending: G.AdditiveBlending }));
+          scene.add(dust);
+
+          /* Hotspots follow their objects */
+          const anchors = { mining: aMine, generators: aGen, power: aPow, ppe: aPpe, security: aSec, network: aNet };
+          const pins = spots.map((el) => ({ el, obj: anchors[el.dataset.spot] })).filter((p) => p.obj);
+
+          /* Camera: limited orbit, gentle auto-rotation, mouse parallax */
+          const target = new G.Vector3(0, 1.75, 0);
+          let theta = 0.3, phi = 1.16, radius = 16;
+          let tTheta = theta, tPhi = phi, pTheta = 0, pPhi = 0;
+          const TH = [-0.6, 1.2], PH = [0.98, 1.36];
+          let dragging = false, lastX = 0, lastY = 0, idleAt = 0, overSpot = false, moved = 0;
+          const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+
+          stage.addEventListener("pointerdown", (e) => {
+            dragging = true; moved = 0;
+            lastX = e.clientX; lastY = e.clientY;
+            try { stage.setPointerCapture(e.pointerId); } catch (err) {}
+            spots.forEach((s) => s.classList.remove("is-open"));
+          });
+          stage.addEventListener("pointermove", (e) => {
+            if (!dragging) return;
+            const dx = e.clientX - lastX, dy = e.clientY - lastY;
+            lastX = e.clientX; lastY = e.clientY;
+            moved += Math.abs(dx) + Math.abs(dy);
+            tTheta = clamp(tTheta - dx * 0.006, TH[0], TH[1]);
+            tPhi = clamp(tPhi - dy * 0.004, PH[0], PH[1]);
+            if (moved > 12 && hint) hint.classList.add("is-gone");
+          });
+          const endDrag = () => { if (dragging) { dragging = false; idleAt = performance.now(); } };
+          stage.addEventListener("pointerup", endDrag);
+          stage.addEventListener("pointercancel", endDrag);
+          hero.addEventListener("pointermove", (e) => {
+            if (e.pointerType !== "mouse" || dragging) return;
+            const r = hero.getBoundingClientRect();
+            pTheta = -((e.clientX - r.left) / r.width - 0.5) * 0.16;
+            pPhi = -((e.clientY - r.top) / r.height - 0.5) * 0.08;
+          });
+          hero.addEventListener("pointerleave", () => { pTheta = 0; pPhi = 0; });
+
+          let lastType = "mouse";
+          spots.forEach((el) => {
+            el.addEventListener("pointerdown", (e) => { lastType = e.pointerType; e.stopPropagation(); });
+            el.addEventListener("keydown", () => { lastType = "key"; });
+            el.addEventListener("pointerenter", () => { overSpot = true; });
+            el.addEventListener("pointerleave", () => { overSpot = false; });
+            el.addEventListener("click", (e) => {
+              e.preventDefault();
+              if (lastType === "touch" && !el.classList.contains("is-open")) {
+                spots.forEach((s) => s.classList.toggle("is-open", s === el));
+                return;
+              }
+              spots.forEach((s) => s.classList.remove("is-open"));
+              const id = el.getAttribute("href").slice(1);
+              const dest = document.getElementById(id);
+              if (window.pickCategory) window.pickCategory(id);
+              if (dest) dest.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+              lastType = "mouse";
+            });
+          });
+
+          function resize() {
+            const w = stage.clientWidth, h = stage.clientHeight;
+            if (!w || !h) return;
+            renderer.setSize(w, h, false);
+            camera.aspect = w / h;
+            const wide = hero.clientWidth > 760;
+            const vf = THREE.MathUtils.degToRad(camera.fov) / 2;
+            const hf = Math.atan(Math.tan(vf) * camera.aspect);
+            const frac = wide ? 0.25 : 0.44;
+            radius = Math.max((5 * 0.5) / (frac * Math.tan(hf)), (2.7 * 0.5) / (0.4 * Math.tan(vf)));
+            radius = clamp(radius, 11, 34);
+            if (wide) camera.setViewOffset(w, h, -w * 0.24, h * 0.02, w, h);
+            else camera.clearViewOffset();
+            scene.fog.near = radius - 3;
+            scene.fog.far = radius + 16;
+            camera.updateProjectionMatrix();
+          }
+          new ResizeObserver(resize).observe(stage);
+          resize();
+
+          const v = new G.Vector3(), dir = new G.Vector3();
+          function placeSpots() {
+            const w = stage.clientWidth, h = stage.clientHeight;
+            camera.getWorldDirection(dir);
+            pins.forEach((p) => {
+              p.obj.getWorldPosition(v);
+              const len = Math.hypot(v.x, v.z) || 1;
+              const back = (v.x * dir.x + v.z * dir.z) / len > 0.45;
+              v.project(camera);
+              const x = (v.x * 0.5 + 0.5) * w, y = (-v.y * 0.5 + 0.5) * h;
+              p.el.style.transform = "translate3d(" + x.toFixed(1) + "px," + y.toFixed(1) + "px,0)";
+              p.el.classList.toggle("is-back", back);
+              p.el.classList.toggle("is-off", v.z > 1 || x < 10 || x > w - 10 || y < 10 || y > h - 10);
+            });
+          }
+
+          const motion = reduce ? 0 : 1;
+          const clock = new G.Clock();
+          let elapsed = 0;
+          function frame() {
+            raf = requestAnimationFrame(frame);
+            const dt = Math.min(clock.getDelta(), 0.05);
+            elapsed += dt;
+            const now = performance.now();
+            const auto = motion && !dragging && !overSpot && now - idleAt > 1500;
+            if (auto) platform.rotation.y += dt * 0.12;
+            const k = 1 - Math.pow(0.0015, dt);
+            theta += (tTheta + pTheta * motion - theta) * k;
+            phi += (clamp(tPhi + pPhi * motion, PH[0], PH[1]) - phi) * k;
+            camera.position.set(
+              target.x + radius * Math.sin(phi) * Math.sin(theta),
+              target.y + radius * Math.cos(phi),
+              target.z + radius * Math.sin(phi) * Math.cos(theta)
+            );
+            camera.lookAt(target);
+
+            gear.rotation.z += dt * 0.7 * motion;
+            bit.rotation.y += dt * 2.4 * motion;
+            camRig.rotation.y = Math.sin(elapsed * 0.45) * 0.9 * motion;
+            const pulse = 0.5 + 0.5 * Math.sin(elapsed * 3);
+            beacon.material.color.setRGB(1, 0.9 * (0.4 + 0.6 * pulse), 0.23 * (0.4 + 0.6 * pulse));
+            mat.core.emissiveIntensity = 0.45 + 0.35 * Math.sin(elapsed * 1.6);
+            lensGlow.visible = Math.sin(elapsed * 2) > -0.6;
+            netTip.visible = Math.sin(elapsed * 4.2) > -0.2;
+            leds.forEach((m, i) => m.color.setHex(Math.sin(elapsed * (5 + i * 1.7) + i * 2) > 0 ? YELLOW : 0x4a3f1c));
+
+            if (motion) {
+              const arr = dustGeo.attributes.position.array;
+              for (let i = 0; i < N; i++) {
+                arr[i * 3 + 1] += spd[i] * dt;
+                arr[i * 3] += Math.sin(elapsed * 0.3 + i) * 0.002;
+                if (arr[i * 3 + 1] > 6) arr[i * 3 + 1] = 0;
+              }
+              dustGeo.attributes.position.needsUpdate = true;
+              dust.rotation.y += dt * 0.02;
+            }
+
+            renderer.render(scene, camera);
+            placeSpots();
+          }
+
+          /* Render only while enabled, on screen and the tab is visible */
+          let raf = 0, enabled = false, onScreen = true, tabOn = !document.hidden;
+          function run() {
+            const go = enabled && onScreen && tabOn;
+            if (go && !raf) { clock.getDelta(); raf = requestAnimationFrame(frame); }
+            else if (!go && raf) { cancelAnimationFrame(raf); raf = 0; }
+          }
+          new IntersectionObserver((entries) => { onScreen = entries[0].isIntersecting; run(); }, { threshold: 0 }).observe(hero);
+          document.addEventListener("visibilitychange", () => { tabOn = !document.hidden; run(); });
+          renderer.domElement.addEventListener("webglcontextlost", (e) => {
+            e.preventDefault();
+            enabled = false; run();
+            hero.classList.remove("is-3d");
+            setUI(false);
+          });
+
+          return { setEnabled(on) { enabled = on; if (on) resize(); run(); } };
+        }
+      })();
+    </script>
+  </body>
+</html>
